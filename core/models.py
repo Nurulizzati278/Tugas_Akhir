@@ -4,12 +4,12 @@ from datetime import datetime
 # Create your models here.
 
 
-# class SuperAdmin(models.Model):
-#     Operatorid = models.BigAutoField(primary_key=True)
-#     NIP = models.AutoField(max_length=25)
-#     Nama = models.CharField(max_length=250)
-#     Divisi = models.CharField(max_length=250)
-#     Ditambahkan = models.DateField(auto_now=True, null=True, blank=True)
+class SuperAdmin(models.Model):
+    Operatorid = models.BigAutoField(primary_key=True)
+    NIP = models.IntegerField()
+    Nama = models.CharField(max_length=250)
+    Divisi = models.CharField(max_length=250)
+    Ditambahkan = models.DateField(auto_now=True, null=True, blank=True)
 
 
 # class AdminSekolah(models.Model):
@@ -34,7 +34,7 @@ from datetime import datetime
 
 # class DataSekolah(models.Model):
 #     SekolahId = models.BigAutoField(primary_key=True)
-#     TanggalBerdiri = models.DateField(auto_now_add=True, null=True, blank=True)
+#     TanggalBerdiri = models.DateField(null=True, blank=True)
 #     JumlahPegawai = models.IntegerField(max_length=100)
 #     JabatanKeseluruhan = models.IntegerField(max_length=100)
 #     # Gambar = models.ImageField(upload_to=common, null=True, blank=True)
