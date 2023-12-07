@@ -1,0 +1,88 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+{% include 'layout_masyarakat/navbar.html' %}
+
+<!-- Main Content -->
+<div class="main-content">
+  <section class="section">
+    <div class="section-header">
+      <h1>Selamat Datang</h1>
+    </div>
+
+    <div class="section-body">
+      <h2 class="section-title">WEBGIS Persebaran Sekolah Menengah Atas (SMA/SMK) Berdasarkan Akreditasi Sekolah</h2>
+        <div class="col-12 col-sm-6 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  Web ini merupakan WebGIS yang dapat melihat persebaran sekolah
+                  berdasarkan Akreditasi Sekolah tersebut
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="card-stats">
+            <div class="card-icon shadow-primary bg-primary">
+              <i class="fas fa-map"></i>
+            </div>
+            <div class="card-wrap">
+              <div class="card-header">
+                <h4>Map</h4>
+              </div>
+              <div class="card-body">
+                <h5>Fitur yang berisi peta Persebaran Sekolah Menengah Atas (SMA/SMK) Berdasarkan Akreditasi Sekolah
+                yang dapat menampilkan peta berdasarkan akreditasi sekolah</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="card-icon shadow-danger bg-danger">
+            <i class="fas fa-archive"></i>
+          </div>
+            <div class="card-wrap">
+              <div class="card-header">
+                <h4>About</h4>
+              </div>
+              <div class="card-body">
+                <h5>Fitur yang berisi informasi mengenai kontak yang dapat dihubungi apabila terjadi kendala
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="card-stats">
+            <div class="card-icon shadow-primary bg-primary">
+              <i class="far fa-newspaper"></i>
+            </div>
+            <div class="card-wrap">
+              <div class="card-header">
+                <h4>Panduan</h4>
+              </div>
+              <div class="card-body">
+                <h5>Halaman yang berisi informasi tata cara penggunaan fitur pada WebGIS ini
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% include 'layout_masyarakat/footer.html' %} 
+{% endblock content %}

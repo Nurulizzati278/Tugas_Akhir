@@ -1,0 +1,87 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+{% include 'layout_admin/navbar.html' %} 
+{% include 'layout_admin/sidebar.html' %}
+
+ <!-- Main Content -->
+ <div class="main-content">
+    <section class="section">
+      <div class="section-header">
+        <h1>Halaman Edit Data</h1>
+        <div class="section-header-breadcrumb">
+          <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+          <div class="breadcrumb-item"><a href="#">Data Sekolah</a></div>
+          <div class="breadcrumb-item">Edit Data Sekolah</div>
+        </div>
+      </div>
+
+      <div class="section-body">
+        <h2 class="section-title">Edit Data Sekolah</h2>
+
+        <div class="row">
+          <div class="container">
+            <div class="card">
+              <form>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>Nama Sekolah</label>
+                    <input type="text" class="form-control" required="">
+                  </div>
+                  <div class="form-group">
+                    <label>Nama Kepala Sekolah</label>
+                    <input type="text" class="form-control" required="">
+                  </div>
+                  <div class="form-group">
+                    <label>Nama Pengawas Sekolah</label>
+                    <input type="text" class="form-control" required="">
+                  </div>
+                  <div class="form-group mb-0">
+                    <label>Alamat Sekolah</label>
+                    <input type="text" class="form-control" required="">
+                  </div>
+                  <div class="form-group mb-0">
+                    <label>Tahun Berdiri Sekolah</label>
+                    <input type="text" class="form-control" required="">
+                  </div>
+                  <div class="form-group mb-0">
+                    <label>Jumlah Guru</label>
+                    <input type="number" class="form-control" required="">
+                  </div>
+                  <div class="form-group mb-0">
+                    <label>Jumlah Siswa</label>
+                    <input type="number" class="form-control" required="">
+                  </div>
+                  <div class="form-group mb-0">
+                    <label>Jumlah Ruang Kelas</label>
+                    <input type="number" class="form-control" required="">
+                  </div>
+                  <div class="form-group mb-0">
+                    <label>Jumlah Pegawai</label>
+                    <input type="number" class="form-control" required="">
+                  </div>
+                  <div class="form-group mb-0">
+                    <label>Jabatan Keseluruhan</label>
+                    <input type="number" class="form-control" required="">
+                  </div>
+                  <div class="form-group mb-0">
+                    <label>Jabatan Keseluruhan</label>
+                    <input type="number" class="form-control" required="">
+                  </div>
+                  <div class="form-group mb-0">
+                    <label>Gambar</label>
+                    <input type="file" class="form-control" required="">
+                  </div>
+                <div class="card-footer text-right">
+                  <a class="btn btn-primary" href=" {% url "edit_penilaian" %} ">Selanjutnya</a>
+                </div>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  {% include 'layout_admin/footer.html' %} {% endblock content %}

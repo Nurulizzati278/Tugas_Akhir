@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+{% include 'layout_masyarakat/navbar.html' %}
+
+<!-- Main Content -->
+<div class="main-content">
+    <section class="section">
+      <div class="section-header">
+        <h1>About Us</h1>
+      </div>
+
+      <div class="section-body">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-lead"></p>
+
+        <div class="container">
+          <div class="col-12 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="empty-state" data-height="400">
+                  <div class="empty-state-icon">
+                    <i class="fas fa-question"></i>
+                  </div>
+                  <h2>Contact Person : 0812345678</h2>
+                  <p class="lead">
+                    Terima Kasih
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+{% include 'layout_masyarakat/footer.html' %} 
+{% endblock content %}

@@ -1,0 +1,109 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+{% include 'layout_admin/navbar.html' %} 
+{% include 'layout_admin/sidebar.html' %}
+
+<div class="main-content">
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="card-stats">
+            <div class="card-stats-title">Jumlah Pegawai dan Staf
+            </div>
+            <div class="card-stats-items">
+              <div class="card-stats-item">
+                <div class="card-stats-item-count">24</div>
+                <div class="card-stats-item-label">Guru</div>
+              </div>
+              <div class="card-stats-item">
+                <div class="card-stats-item-count">12</div>
+                <div class="card-stats-item-label">Honorer</div>
+              </div>
+              <div class="card-stats-item">
+                <div class="card-stats-item-count">23</div>
+                <div class="card-stats-item-label">Staf</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-icon shadow-primary bg-primary">
+            <i class="fas fa-archive"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Total</h4>
+            </div>
+            <div class="card-body">
+              59
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="card-chart">
+            <canvas id="balance-chart" height="80"></canvas>
+          </div>
+          <div class="card-icon shadow-danger bg-danger">
+            <i class="far fa-newspaper"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Kelulusan Per Tahun</h4>
+            </div>
+            <div class="card-body">
+              95/100
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="card-stats">
+            <div class="card-stats-title">Jumlah Siswa
+            </div>
+            <div class="card-stats-items">
+              <div class="card-stats-item">
+                <div class="card-stats-item-count">24</div>
+                <div class="card-stats-item-label">Kelas X</div>
+              </div>
+              <div class="card-stats-item">
+                <div class="card-stats-item-count">12</div>
+                <div class="card-stats-item-label">Kelas XI</div>
+              </div>
+              <div class="card-stats-item">
+                <div class="card-stats-item-count">23</div>
+                <div class="card-stats-item-label">Kelas XII</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-icon shadow-primary bg-primary">
+            <i class="fas fa-archive"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Total</h4>
+            </div>
+            <div class="card-body">
+              59
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-12 col-12 col-sm-12">
+        <div class="card mt-sm-5 mt-md-0">
+          <div class="card-header">
+            <h4>Peta Akreditasi Sekolah</h4>
+          </div>
+          <div class="card-body">
+            <div id="visitorMap"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</div>
+
+{% include 'layout_admin/footer.html' %} {% endblock content %}

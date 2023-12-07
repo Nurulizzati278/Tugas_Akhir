@@ -1,0 +1,30 @@
+{% block content %}
+<div class="main-sidebar sidebar-style-2">
+    <aside id="sidebar-wrapper">
+      <div class="sidebar-brand">
+        <a href="index.html">Akreditasi Sekolah</a>
+      </div>
+      <div class="sidebar-brand sidebar-brand-sm">
+        <a href="index.html">St</a>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-header">Dashboard</li>
+        <li class="dropdown">
+          <a href=" {% url "home" %} " class="nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+        </li>
+        <li class="dropdown">
+          <a href=" {% url "dashboard" %} " class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+        </li>
+        <li class="menu-header">Starter</li>
+        <li><a class="nav-link" href="{% url "profile" %}"><i class="far fa-user"></i> <span>Profile</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Data Sekolah</span></a>
+          <ul class="dropdown-menu">
+            <li><a class="nav-link" href=" {% url "tambah_data" %} ">Isi Data Sekolah</a></li>
+            <li><a class="nav-link" href=" {% url "edit_data" %}">Edit Data Sekolah</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="{% url "panduan" %}"><i class="far fa-newspaper"></i> <span>Panduan</span></a></li>
+    </aside>
+</div>
+{% endblock content %}
