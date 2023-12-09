@@ -44,6 +44,11 @@ INSTALLED_APPS = [
     "core",
 ]
 
+AUTH_USER_MODEL = 'core.CustomUser'
+
+LOGIN_URL = 'loginadmin/'
+
+
 
 TAILWIND_APP_NAME = 'theme'
 
@@ -84,7 +89,7 @@ GEOS_LIBRARY_PATH="C:/OSGeo4W/bin/geos_c.dll"
 DATABASES = {
     "default": {
         "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "NAME": "nurulizzaati",
+        "NAME": "nurulizzt",
         "USER": "postgres",
         "PASSWORD": "yovie123",
         "HOST": "localhost",  # Ganti sesuai dengan host PostgreSQL Anda
