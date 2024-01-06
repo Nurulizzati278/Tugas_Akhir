@@ -97,8 +97,17 @@ WSGI_APPLICATION = "akreditasi_sekolah.wsgi.application"
 #     }
 # }
 
-GDAL_LIBRARY_PATH = "C:/OSGeo4W/bin/gdal308.dll"
-
+# GDAL_LIBRARY_PATH = "C:/OSGeo4W/bin/gdal308.dll"
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'overlord',
+        'USER': 'postgres',
+        'PASSWORD': 'yoviepramudya',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
