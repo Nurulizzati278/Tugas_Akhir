@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>EduAccredTrack</title>
+    <title>Akreditasi Sekolah</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
@@ -77,9 +77,7 @@
         >
           <a href="" class="navbar-brand p-0">
             <h1 class="m-0">
-              <i class="fa fa-search me-2"></i>EduAccred<span class="fs-5"
-                >Track</span
-              >
+              <i class="fa fa-school"> Akreditasi Sekolah</i>
             </h1>
             <!-- <img src="{% static 'img/logo.png' %}" alt="Logo"> -->
           </a>
@@ -94,26 +92,26 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
               <a href="{% url "landing_page" %}" class="nav-item nav-link active">Home</a>
-              <a href="{% url "about" %}" class="nav-item nav-link">About</a>
               <a href="{% url "map" %}" class="nav-item nav-link">Maps</a>
-              <a href="{% url "verify" %}" class="nav-item nav-link">Verify</a>
-              <div class="nav-item dropdown">
+              <a href="{% url "verify" %}" class="nav-item nav-link">Grafik</a>
+              <a href="{% url "about" %}" class="nav-item nav-link">About</a>
+              <a href="{% url "kontak" %}" class="nav-item nav-link">Contact</a>
+              <div class="nav-item dropdown active">
                 <a
                   href="#"
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle active"
                   data-bs-toggle="dropdown"
                   >Pengajuan</a
                 >
                 <div class="dropdown-menu m-0">
-                  <a href="{% url "pengajuan" %}" class="dropdown-item"
+                  <a href="{% url "pengajuan" %}" class="dropdown-item active"
                     >Pengajuan Akreditasi</a
                   >
-                  <a href="{% url "pelaporan" %}" class="dropdown-item"
+                  <a href="{% url "pelaporan" %}" class="dropdown-item "
                     >Pelaporan kedinasan</a
                   >
                 </div>
               </div>
-              <a href="{% url "kontak" %}" class="nav-item nav-link">Contact</a>
             </div>
             <butaton
               type="button"
@@ -318,20 +316,7 @@
             <h2 class="mt-2">Beberapa pendukung dari sistem ini</h2>
           </div>
           <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
-              <div
-                class="service-item d-flex flex-column justify-content-center text-center rounded"
-              >
-                <div class="service-icon flex-shrink-0">
-                  <i class="fa fa-home fa-2x"></i>
-                </div>
-                <h5 class="mb-3">KAPOLRI</h5>
-                <p>
-                  Diawasi dan dibatasi dari beberapa pihak termasuk polisi
-                </p>
-                <a class="btn px-3 mt-auto mx-auto" href="">Lanjut</a>
-              </div>
-            </div>
+
             <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
               <div
                 class="service-item d-flex flex-column justify-content-center text-center rounded"
@@ -354,7 +339,7 @@
                 <div class="service-icon flex-shrink-0">
                   <i class="fa fa-home fa-2x"></i>
                 </div>
-                <h5 class="mb-3">DINAS SOSIAL</h5>
+                <h5 class="mb-3">BAN-S/M</h5>
                 <p>
                   Erat ipsum justo amet duo et elitr dolor, est duo duo eos
                   lorem sed diam stet diam sed stet lorem.
@@ -362,21 +347,7 @@
                 <a class="btn px-3 mt-auto mx-auto" href="">Lanjut</a>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
-              <div
-                class="service-item d-flex flex-column justify-content-center text-center rounded"
-              >
-                <div class="service-icon flex-shrink-0">
-                  <i class="fa fa-home fa-2x"></i>
-                </div>
-                <h5 class="mb-3">KEMENTRIAN PENDIDIKAN</h5>
-                <p>
-                  Erat ipsum justo amet duo et elitr dolor, est duo duo eos
-                  lorem sed diam stet diam sed stet lorem.
-                </p>
-                <a class="btn px-3 mt-auto mx-auto" href="">Lanjut</a>
-              </div>
-            </div>
+        
             <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
               <div
                 class="service-item d-flex flex-column justify-content-center text-center rounded"
@@ -392,220 +363,10 @@
                 <a class="btn px-3 mt-auto mx-auto" href="">Lanjut</a>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-              <div
-                class="service-item d-flex flex-column justify-content-center text-center rounded"
-              >
-                <div class="service-icon flex-shrink-0">
-                  <i class="fa fa-home fa-2x"></i>
-                </div>
-                <h5 class="mb-3">PERSATUAN PONPES</h5>
-                <p>
-                  Erat ipsum justo amet duo et elitr dolor, est duo duo eos
-                  lorem sed diam stet diam sed stet lorem.
-                </p>
-                <a class="btn px-3 mt-auto mx-auto" href="">Lanjut</a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
       <!-- Service End -->
-
-      <!-- Portfolio Start -->
-      <div class="container-xxl py-5">
-        <div class="container px-lg-5">
-          <div
-            class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp"
-            data-wow-delay="0.1s"
-          >
-            <h6 class="position-relative d-inline text-primary ps-4">
-              Beberapa Aspek Penilaian
-            </h6>
-            <h2 class="mt-2">Aspek penentuan Akreditasi</h2>
-          </div>
-          <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="col-12 text-center">
-              <ul class="list-inline mb-5" id="portfolio-flters">
-                <li class="btn px-3 pe-4 active" data-filter="*">All</li>
-                <li class="btn px-3 pe-4" data-filter=".first">Menilai</li>
-                <li class="btn px-3 pe-4" data-filter=".second">Memilih</li>
-              </ul>
-            </div>
-          </div>
-          <div class="row g-4 portfolio-container">
-            <div
-              class="col-lg-4 col-md-6 portfolio-item first wow zoomIn"
-              data-wow-delay="0.1s"
-            >
-              <div class="position-relative rounded overflow-hidden">
-                <img
-                  class="img-fluid w-100"
-                  src="{% static 'assets/image/lp/portfolio-1.jpg' %}"
-                  alt=""
-                />
-                <div class="portfolio-overlay">
-                  <a
-                    class="btn btn-light"
-                    href="{% static 'assets/image/lp/portfolio-1.jpg' %}"
-                    data-lightbox="portfolio"
-                    ><i class="fa fa-plus fa-2x text-primary"></i
-                  ></a>
-                  <div class="mt-auto">
-                    <small class="text-white"
-                      ><i class="fa fa-folder me-2"></i>Web Design</small
-                    >
-                    <a class="h5 d-block text-white mt-1 mb-0" href=""
-                      >Project Name</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 portfolio-item second wow zoomIn"
-              data-wow-delay="0.3s"
-            >
-              <div class="position-relative rounded overflow-hidden">
-                <img
-                  class="img-fluid w-100"
-                  src="{% static 'assets/image/lp/portfolio-2.jpg' %}"
-                  alt=""
-                />
-                <div class="portfolio-overlay">
-                  <a
-                    class="btn btn-light"
-                    href="{% static 'assets/image/lp/portfolio-2.jpg' %}"
-                    data-lightbox="portfolio"
-                    ><i class="fa fa-plus fa-2x text-primary"></i
-                  ></a>
-                  <div class="mt-auto">
-                    <small class="text-white"
-                      ><i class="fa fa-folder me-2"></i>Web Design</small
-                    >
-                    <a class="h5 d-block text-white mt-1 mb-0" href=""
-                      >Project Name</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 portfolio-item first wow zoomIn"
-              data-wow-delay="0.6s"
-            >
-              <div class="position-relative rounded overflow-hidden">
-                <img
-                  class="img-fluid w-100"
-                  src="{% static 'assets/image/lp/portfolio-3.jpg' %}"
-                  alt=""
-                />
-                <div class="portfolio-overlay">
-                  <a
-                    class="btn btn-light"
-                    href="{% static 'assets/image/lp/portfolio-3.jpg' %}"
-                    data-lightbox="portfolio"
-                    ><i class="fa fa-plus fa-2x text-primary"></i
-                  ></a>
-                  <div class="mt-auto">
-                    <small class="text-white"
-                      ><i class="fa fa-folder me-2"></i>Web Design</small
-                    >
-                    <a class="h5 d-block text-white mt-1 mb-0" href=""
-                      >Project Name</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 portfolio-item second wow zoomIn"
-              data-wow-delay="0.1s"
-            >
-              <div class="position-relative rounded overflow-hidden">
-                <img
-                  class="img-fluid w-100"
-                  src="{% static 'assets/image/lp/portfolio-4.jpg' %}"
-                  alt=""
-                />
-                <div class="portfolio-overlay">
-                  <a
-                    class="btn btn-light"
-                    href="{% static 'assets/image/lp/portfolio-4.jpg' %}"
-                    data-lightbox="portfolio"
-                    ><i class="fa fa-plus fa-2x text-primary"></i
-                  ></a>
-                  <div class="mt-auto">
-                    <small class="text-white"
-                      ><i class="fa fa-folder me-2"></i>Web Design</small
-                    >
-                    <a class="h5 d-block text-white mt-1 mb-0" href=""
-                      >Project Name</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 portfolio-item first wow zoomIn"
-              data-wow-delay="0.3s"
-            >
-              <div class="position-relative rounded overflow-hidden">
-                <img
-                  class="img-fluid w-100"
-                  src="{% static 'assets/image/lp/portfolio-5.jpg' %}"
-                  alt=""
-                />
-                <div class="portfolio-overlay">
-                  <a
-                    class="btn btn-light"
-                    href="{% static 'assets/image/lp/portfolio-5.jpg' %}"
-                    data-lightbox="portfolio"
-                    ><i class="fa fa-plus fa-2x text-primary"></i
-                  ></a>
-                  <div class="mt-auto">
-                    <small class="text-white"
-                      ><i class="fa fa-folder me-2"></i>Web Design</small
-                    >
-                    <a class="h5 d-block text-white mt-1 mb-0" href=""
-                      >Project Name</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 portfolio-item second wow zoomIn"
-              data-wow-delay="0.6s"
-            >
-              <div class="position-relative rounded overflow-hidden">
-                <img
-                  class="img-fluid w-100"
-                  src="{% static 'assets/image/lp/portfolio-6.jpg' %}"
-                  alt=""
-                />
-                <div class="portfolio-overlay">
-                  <a
-                    class="btn btn-light"
-                    href="{% static 'assets/image/lp/portfolio-6.jpg' %}"
-                    data-lightbox="portfolio"
-                    ><i class="fa fa-plus fa-2x text-primary"></i
-                  ></a>
-                  <div class="mt-auto">
-                    <small class="text-white"
-                      ><i class="fa fa-folder me-2"></i>Web Design</small
-                    >
-                    <a class="h5 d-block text-white mt-1 mb-0" href=""
-                      >Project Name</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Portfolio End -->
 
       <!-- Testimonial Start -->
       <div
@@ -620,7 +381,7 @@
               <i class="fa fa-quote-left fa-2x mb-3"></i>
               <p>
                 Hayoloh Jangan males-malesan harus tetap
-                semangat dan gaboleh jaat
+                semangat
               </p>
               <div class="d-flex align-items-center">
                 <img
@@ -660,8 +421,7 @@
             >
               <i class="fa fa-quote-left fa-2x mb-3"></i>
               <p>
-                Sedih bangeet ya ga ada yang bisa ngertiin,
-                semoga kamu bahagia ❤️.
+                hello.
               </p>
               <div class="d-flex align-items-center">
                 <img
@@ -712,39 +472,7 @@
             <h2 class="mt-2">Tim Developer Support</h2>
           </div>
           <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="team-item">
-                <div class="d-flex">
-                  <div
-                    class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
-                    style="width: 75px"
-                  >
-                    <a class="btn btn-square text-primary bg-white my-1" href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a class="btn btn-square text-primary bg-white my-1" href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a class="btn btn-square text-primary bg-white my-1" href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                    <a class="btn btn-square text-primary bg-white my-1" href=""
-                      ><i class="fab fa-linkedin-in"></i
-                    ></a>
-                  </div>
-                  <img
-                    class="img-fluid rounded w-100"
-                    src="{% static 'assets/image/lp/team-1.jpg' %}"
-                    alt=""
-                  />
-                </div>
-                <div class="px-4 py-3">
-                  <h5 class="fw-bold m-0">Jhon Doe</h5>
-                  <small>CEO</small>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="container col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
               <div class="team-item">
                 <div class="d-flex">
                   <div
@@ -771,40 +499,8 @@
                   />
                 </div>
                 <div class="px-4 py-3">
-                  <h5 class="fw-bold m-0">Emma William</h5>
-                  <small>Manager</small>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="team-item">
-                <div class="d-flex">
-                  <div
-                    class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
-                    style="width: 75px"
-                  >
-                    <a class="btn btn-square text-primary bg-white my-1" href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a class="btn btn-square text-primary bg-white my-1" href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a class="btn btn-square text-primary bg-white my-1" href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                    <a class="btn btn-square text-primary bg-white my-1" href=""
-                      ><i class="fab fa-linkedin-in"></i
-                    ></a>
-                  </div>
-                  <img
-                    class="img-fluid rounded w-100"
-                    src="{% static 'assets/image/lp/team-3.jpg' %}"
-                    alt=""
-                  />
-                </div>
-                <div class="px-4 py-3">
-                  <h5 class="fw-bold m-0">Noah Michael</h5>
-                  <small>Designer</small>
+                  <h5 class="fw-bold m-0">Nurul Izzati</h5>
+                  <small>Developer</small>
                 </div>
               </div>
             </div>
@@ -819,107 +515,21 @@
         data-wow-delay="0.1s"
       >
         <div class="container py-5 px-lg-5">
-          <div class="row g-5">
-            <div class="col-md-6 col-lg-3">
+          <div class="row g-10">
+            <div class="container col-md-6 col-lg-3">
               <h5 class="text-white mb-4">Alamat kami</h5>
               <p>
                 <i class="fa fa-map-marker-alt me-3"></i>Banda Aceh, Aceh
               </p>
               <p><i class="fa fa-phone-alt me-3"></i>+62 823-6508-9272</p>
               <p><i class="fa fa-envelope me-3"></i>Nurulizzati@dis.com</p>
-              <div class="d-flex pt-2">
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-youtube"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-              </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-              <h5 class="text-white mb-4">Anda dapat mengunjungi</h5>
-              <a class="btn btn-link" href="">About Us</a>
-              <a class="btn btn-link" href="">Contact Us</a>
-              <a class="btn btn-link" href="">Privacy Policy</a>
-              <a class="btn btn-link" href="">Terms & Condition</a>
-              <a class="btn btn-link" href="">Career</a>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <h5 class="text-white mb-4">Sekolah Pilihan</h5>
-              <div class="row g-2">
-                <div class="col-4">
-                  <img
-                    class="img-fluid"
-                    src="{% static 'assets/image/lp/portfolio-1.jpg' %}"
-                    alt="Image"
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid"
-                    src="{% static 'assets/image/lp/portfolio-2.jpg' %}"
-                    alt="Image"
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid"
-                    src="{% static 'assets/image/lp/portfolio-3.jpg' %}"
-                    alt="Image"
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid"
-                    src="{% static 'assets/image/lp/portfolio-4.jpg' %}"
-                    alt="Image"
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid"
-                    src="{% static 'assets/image/lp/portfolio-5.jpg' %}"
-                    alt="Image"
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid"
-                    src="{% static 'assets/image/lp/portfolio-6.jpg' %}"
-                    alt="Image"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="container col-md-100 col-lg-3">
               <h5 class="text-white mb-4">Tentang Kami</h5>
               <p>
                 Mengawasi serta memeriksa layanan akreditasi dengan baik dan benar
                 serta membuat beberapa perubahan untuk pendidikan yang lebih terjaga
               </p>
-              <div class="position-relative w-100 mt-3">
-                <input
-                  class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
-                  type="text"
-                  placeholder="Kirim Pesan"
-                  style="height: 48px"
-                />
-                <button
-                  type="button"
-                  class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
-                >
-                  <i class="fa fa-paper-plane text-primary fs-4"></i>
-                </button>
-              </div>
             </div>
           </div>
         </div>
@@ -942,14 +552,6 @@
                   target="_blank"
                   >NURUL IZZATI</a
                 >
-              </div>
-              <div class="col-md-6 text-center text-md-end">
-                <div class="footer-menu">
-                  <a href="">Home</a>
-                  <a href="">Cookies</a>
-                  <a href="">Help</a>
-                  <a href="">FQAs</a>
-                </div>
               </div>
             </div>
           </div>

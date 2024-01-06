@@ -1,0 +1,921 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+{% include 'layout_admin/navbar.html' %} 
+{% include 'layout_admin/sidebar.html' %}
+
+ <!-- Main Content -->
+ <div class="main-content">
+    <section class="section">
+      <div class="section-header">
+        <h1>Halaman Pengajuan Nilai Akreditasi </h1>
+        <div class="section-header-breadcrumb">
+          <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+          <div class="breadcrumb-item"><a href="#">Pengajuan Akreditasi</a></div>
+        </div>
+      </div>
+
+        <div class="section-body">
+            <h2 class="section-title">Pengajuan Akreditasi</h2>
+            <div class="row">
+                <div class="container">
+                    <div class="card">
+                    <form>
+                        <div class="card-body">
+                        <div class="form-group">
+                            <label>Komponen Manajemen Sekolah</label>
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr class="table-success">
+                                  <th scope="col">No</th>
+                                  <th scope="col">Kondisi Ideal level 4 IASP 2020</th>
+                                  <th scope="col">Dokumen yang dibutuhkan</th>
+                                  <th scope="col">Dokumen Pendukung</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">23</th>
+                                  <td>Sekolah/madrasah mengembangkan, menyosialisasikan, mengimplementasikan 
+                                    dan mengevaluasi visi, misi, dan tujuan yang melibatkan pemangku kepentingan 
+                                    dan hasil evaluasi dipergunakan untuk perbaikan dan peningkatan mutu 
+                                    sekolah/madrasah secara berkelanjutan.
+                                  </td>
+                                  <td>Daftar hadir rapat pengembangan visi misi</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Foto, leaflet, pamflet, brosur, video kegiatan sosialisasi visi misi (daftar hadir, jika ada)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>2 laporan kegiatan yang merupakan implementasi visi misi</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen hasil evaluasi tahunan pencapaian visi, misi, tujuan dan rencana sekolah</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen rekomendasi dari hasil evaluasi (notulen rapat)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen visi misi versi sebelumnya dan versi setelah perbaikan berdasarkan rekomendasi</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                  <td>Dokumen rapat penyusunan RKS/RKAS/RAPBS/Pengembangan sekolah dan RKS 2 periode</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen sosialisasi visi misi</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Laporan kegiatan pelaksanaan program</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen hasil evaluasi dan hasil evaluasi tahunan pencapaian visi misi tujuan dan rencana sekolah</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen rekomendasi dari hasil evaluasi (notulen rapat)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">24</th>
+                                  <td>Kepala sekolah/madrasah merencanakan, melaksanakan, mengevaluasi, 
+                                    dan melakukan tindak lanjut atas hasil supervisi akademik kepada 
+                                    guru secara berkelanjutan dan berdampak signifikan terhadap peningkatan 
+                                    kinerja guru serta pembelajaran yang bermutu.
+                                  </td>
+                                  <td>Jadwal supervisi kepala sekolah/wakil kepala sekolah (3 tahun terakhir)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen hasil observasi kepala sekolah terhadap guru di kelas 3 (tiga) tahun terakhir, 
+                                    lembar observasi atau catatan lain (kualitatif) (SMA mapel IPA (salahsatu), IPS (salah satu), 
+                                    matematika, B.Inggris, B.Indonesia dan PPKN)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                  <td>Program/rencana pelaksanaan supervisi dan surat penugasan supervisor</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen hasil supervisi 3 tahun terakhir</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">25</th>
+                                  <td>Kepala sekolah/madrasah memimpin guru, tenaga kependidikan, 
+                                    dan siswa untuk mengembangkan ide-ide kreatif dan inovatif yang 
+                                    dituangkan dalam RKS/RKAS yang dalam penyusunannya melibatkan warga 
+                                    sekolah/madrasah dan pemangku kepentingan lainnya serta diimplementasikan 
+                                    secara konsisten dan efektif, akuntabel, dan transparan berdampak 
+                                    nyata pada pengembangan sekolah/madrasah.
+                                  </td>
+                                  <td>Daftar hadir rapat RKS/RKAS dan notulen</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Laporan kegiatan pelaksanaan program yang melibatkan warga sekolah dan pemangku kepentingan, bisa berupa: video dan/atau foto</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Laporan kegiatan pelaksaan program kreatif dan inovatif berupa ; video dan/atau foto hasil karya guru/siswa</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                  <td>Dokumen RKS/RKAS 2 periode dan dokumen rapat penyusunan RKS/RKAS</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Laporan kegiatan pelaksanaan program</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">26</th>
+                                  <td>Sekolah/madrasah menunjukkan komunikasi dan interaksi antara siswa, 
+                                    guru, dan warga sekolah/madrasah, orang tua dan masyarakat sekitar 
+                                    secara harmonis dan berdampak pada terciptanya budaya kerja sama yang kuat.
+                                  </td>
+                                  <td>Dokumen kerja sama s/m dengan orangtua siswa, masyarakat sekitar 
+                                    (notulen rapat, daftar hadir rapat, foto/video)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                  <input type="file" class="form-control">
+                                  </td>
+                                  <td>Dokumen kerja sama s/m dengan orangtua siswa, masyarakat sekitar 
+                                    (notulen rapat, daftar hadir rapat, foto/video)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">27</th>
+                                  <td>Sekolah/madrasah menunjukkan suasana aman, tertib, bersih, 
+                                    dan nyaman bagi seluruh warga sekolah/madrasah untuk menciptakan 
+                                    lingkungan sekolah/madrasah yang kondusif dan berdampak pada 
+                                    persepsi positif masyarakat terhadap sekolah/madrasah.
+                                  </td>
+                                  <td>Dokumen pelaksanaan kegiatan kebersihan s/m, misalnya dokumen 
+                                    pembagian tugas di bidang kebersihan, jadwal kebersihan dan dokumentasi </br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                  <td>Dokumen pelaksanaan kegiatan kebersihan s/m, misalnya dokumen 
+                                    pembagian tugas di bidang kebersihan, jadwal kebersihan dan dokumentasi kegiatan</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">28</th>
+                                  <td>Manajemen dan komite sekolah/madrasah merupakan mitra setara, 
+                                    yang terlihat pada kepedulian dan pemahaman komite sekolah/madrasah 
+                                    terhadap kondisi, masalah, dan tantangan yang sedang dihadapi 
+                                    sekolah/madrasah dan menjadikannya sebagai tantangan bersama. 
+                                    Pertemuan komite dengan manajemen sekolah/madrasah dapat terjadi 
+                                    sewaktu-waktu atas inisiatif salah satu pihak. Keterlibatan tokoh 
+                                    masyarakat dalam perencanaan, pelaksanaan, dan pengawasan program-program 
+                                    sekolah/madrasah terjadi atas inisiatif komite maupun manajemen sekolah/madrasah 
+                                    serta berdampak pada persepsi positif masyarakat terhadap sekolah/madrasah.
+                                  </td>
+                                  <td>Dokumen RKAS 1 Tahun</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen RKAS 4 Tahun</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Daftar hadir rapat RKS/RKAS dan notulen</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                  <td>Dokumen rapat penyusunan RKS/RKAS/RAPBS/Pengembangan s/m</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Laporan kegiatan penyusunan perencanaan dan pengawasan program s/m</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">29</th>
+                                  <td>Sekolah/madrasah mengembangkan kurikulum tingkat satuan pendidikan dengan 
+                                    melibatkan para pemangku kepentingan, serta mengimplementasikan dan mengevaluasi 
+                                    secara sistematis, kreatif, inovatif, dan efektif yang berkesinambungan serta
+                                     berdampak pada peningkatan prestasi siswa.
+                                  </td>
+                                  <td>RPP SMK dan SMA tahun berjalan mapel B.Indonesia, matematika, B.Inggris, IPA, IPS (diwakili 3 tingkat)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Notulen raker /pertemuan penyusunan kurikulum s/m, daftar hadir</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen raker/rapat evaluasi kurikulum yang berisi rekomendasi perbaikan hasil evaluasi</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                  <td>Notula raker/pertemuan penyusunan kurikulum s/m dan renstra atau rencana pengembangan kurikulum</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Program/panduan pembelajaran s/m</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen raker/rapat evaluasi yang berisi rekomendasi perbaikan hasil evaluasi</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Buku leger atau rekap nilai</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">30</th>
+                                  <td>Sekolah/madrasah menerapkan secara konsisten pengelolaan guru dan 
+                                    tenaga kependidikan yang komprehensif, efektif, efisien, dan akuntabel 
+                                    pada kegiatan rekrutmen, seleksi, penugasan, pengembangan kompetensi, 
+                                    penilaian kinerja, dan pemberian penghargaan/sanksi yang berdampak terhadap 
+                                    persepsi positif pemangku kepentingan, iklim kerja yang kondusif, dan peningkatan kinerja.
+                                  </td>
+                                  <td>Panduan atau SOP pelaksanaan tugas guru/tenaga kependidikan</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Jadwal mengajar guru, penugasan lain yang dibebankan kepada guru dan pembagian tugas tenaga kependidikan</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen penilaian kinerja guru berupa format penilaian kinerja</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Hasil penilaian kinerja guru</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen penilaian kinerja tenaga kependidikan berupa format penilaian kinerja</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Hasil penilaian kinerja tenaga kependidikan</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Bukti penghargaan/sanksi seperti: piagam, sertifikat, foto, video, surat peringatan , SK, surat teguran, buku/catatan pelanggaran dsb</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                  <td>Panduan atau SOP pelaksanaan tugas guru/tenaga kependidikan dan dokumen penugasan guru/tenaga kependidikan</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Dokumen penilaian kinerja</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Panduan atau SOP pelaksanaan tugas guru/tenaga kependidikan dan bukti penghargaan/sanksi</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">31</th>
+                                  <td>Sekolah/madrasah mengelola sarana dan prasarana secara konsisten dan 
+                                    efisien dengan melibatkan semua warga sekolah/madrasah dan pemangku kepentingan 
+                                    lainnya dalam pelaksanaan prosedur penggunaan dan pemeliharaan yang hasilnya 
+                                    terlihat pada sarana dan prasarana yang berkondisi baik, bersih, rapi, aman, 
+                                    nyaman, dan mudah diakses sehingga berdampak positif terhadap proses 
+                                    pembelajaran yang efektif.
+                                  </td>
+                                  <td>Panduan /SOP Pengelolaan sarana dan prasarana (data inventaris sarana dan prasarana, mulai dari perencanaan sampai penghapusan)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                  <td>Panduan /SOP Pengelolaan sarana dan prasarana</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">32</th>
+                                  <td>Sekolah/madrasah menyusun perencanaan program dan anggaran pendapatan dan 
+                                    belanja sekolah/madrasah berdasarkan evaluasi diri sekolah/madrasah dengan 
+                                    melibatkan komite sekolah/madrasah. Realisasi penggunaan anggaran dan belanja 
+                                    dilakukan berdasarkan perencanaan yang telah disusun. Laporan keuangan disusun
+                                    secara periodik dengan prinsip transparan dan akuntabel berdasarkan peraturan 
+                                    yang berlaku dan disampaikan ke pihak yang berkepentingan baik di dalam maupun 
+                                    di luar sekolah. Laporan akhir keuangan diaudit secara internal atau eksternal 
+                                    dengan hasil baik.
+                                  </td>
+                                  <td>Dokumen rapat penyusunan RAPBS, berupa daftar hadir, notulen rapat</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>RAPBS</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Laporan keuangan 1 tahun terakhir</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Hasil catatan audit internal atau eksternal 3 tahun terakhir</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                  </td>
+                                  <td>RAPBS</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>EDS/M</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Dokumen rapat penyusunan RKS/RKAS/RAPBS/Pengembangan s/m</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Laporan kegiatan pelaksanaan dan pengawasan program s/m dan dokumen audit pelaksanaan anggaran/RAPBS</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">33</th>
+                                  <td>Sekolah/madrasah menyelenggarakan kegiatan ekstrakurikuler dan 
+                                    mengikutsertakan siswa dalam berbagai kompetisi serta mendapatkan 
+                                    dukungan fasilitas dari sekolah/madrasah, orang tua dan masyarakat 
+                                    yang menghasilkan berbagai prestasi.
+                                  </td>
+                                  <td>Dokumen program/kegiatan ekstrakulikuler, berupa: foto dan/atau video, laporan kegiatan, jadwal kegiatan</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Surat tugas pembina dan tim lomba/kompetensi siswa, undangan keikutsertaan, foto, sertifikat keikutsertaan</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Sertifikat prestasi, foto piagam/piala/medali</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                      <input type="file" class="form-control" >
+                                  </td>
+                                  <td>Dokumen program/kegiatan ekstrakurikuler</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Surat tugas pembina dan tim lomba/kompetisi</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Bukti prestasi (piagam dan/atau piala)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">34</th>
+                                  <td>Sekolah/madrasah memberikan layanan bimbingan dan konseling dalam bidang 
+                                    pribadi, sosial, akademik, pendidikan lanjut, dan/atau karier untuk 
+                                    mendukung pencapaian dan pengembangan prestasi secara berkelanjutan 
+                                    dengan dukungan SDM yang berkualitas.
+                                  </td>
+                                  <td>Dokumen program layanan BK dalam bidang: pengembangan pribadi, sosial, akademik dan pendidikan</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Dokumen laporan layanan BK dalam bidang: pengembangan pribadi, sosial, akademik dan pendidikan</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                  </td>
+                                  <td>Dokumen program layanan BK dalam bidang pengembangan pribadi dan Dokumen laporan layanan BK dalam bidang pengembangan pribadi</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Dokumen program layanan BK dalam bidang pengembangan sosial dan Dokumen laporan layanan BK dalam bidang pengembangan sosial</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Dokumen program layanan BK dalam bidang pengembangan akademik dan Dokumen laporan layanan BK dalam bidang pengembangan akademik</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Dokumen program layanan BK dalam bidang pendidikan lanjut dan/atau karier dan Dokumen laporan layanan BK dalam bidang pendidikan lanjut dan/atau karier</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">35</th>
+                                  <td>Sekolah/madrasah menyusun RKA-S/M dengan merujuk rapor mutu dan hasil 
+                                    EDS/M, melakukan evaluasi pelaksanaan program dalam RKA-S/M, menyusun 
+                                    rencana perbaikan RKA-S/M tahun berikutnya, dan melakukan tindakan 
+                                    perbaikan secara berkelanjutan.
+                                  </td>
+                                  <td>Dokumen RKA-S/M tahun sebelumnya</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Dokumen evaluasi diri s/m tahun sebelumnya</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                  </td>
+                                  <td>Dokumen evaluasi diri s/m</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                    <br>Dokumen RKA s/m dan dokumen EDS/M</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control" >
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer text-right">
+                        <a class="btn btn-secondary" href=" {% url "komponen_mutu_guru" %} ">Kembali</a>
+                        <a class="btn btn-primary" href=" {% url "nilai_akhir" %} ">Selanjutnya</a>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% include 'layout_admin/footer.html' %} {% endblock content %}

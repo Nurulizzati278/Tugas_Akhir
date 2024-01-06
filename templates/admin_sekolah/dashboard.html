@@ -91,13 +91,39 @@
           </div>
         </div>
       </div>
+
+      <div class="col-lg-4 col-md-12 col-12 col-sm-12">
+        <div class="card mt-sm-5 mt-md-0">
+          <a href="{% url 'PengajuanSekolah' %}" class="btn btn-primary">Tambah Data Sekolah</a>
+        </div>
+      </div>
+
       <div class="col-lg-8 col-md-12 col-12 col-sm-12">
         <div class="card mt-sm-5 mt-md-0">
           <div class="card-header">
             <h4>Peta Akreditasi Sekolah</h4>
           </div>
           <div class="card-body">
-            <div id="visitorMap"></div>
+            <div id="map" style="height: 430px;border-radius: 30px;">
+              <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+              <!--fullscreen-->
+              <link rel="stylesheet" href="https://unpkg.com/leaflet-fullscreen/dist/leaflet.fullscreen.css" />
+              <script src="https://unpkg.com/leaflet-fullscreen/dist/Leaflet.fullscreen.min.js"></script>
+              <script>
+                var myMap = L.map("map").setView(
+                  [5.549037601496668, 95.31928497494027],
+                  11
+                );
+                var marker;
+          
+                // Tambahkan layer peta
+                L.tileLayer("http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
+                  maxZoom: 20,
+                  subdomains: ["mt0", "mt1", "mt2", "mt3"],
+                }).addTo(myMap);
+                myMap.addControl(new L.Control.Fullscreen());
+              </script>
+            </div>
           </div>
         </div>
       </div>
@@ -105,36 +131,6 @@
     </div>
   </section>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script>
-  {% if messages %}
-      {% for message in messages %}
-      {% if message.tags == 'success' %}
-          Swal.fire({
-          icon: 'success',
-          title: '{{ message }}',
-          showConfirmButton: false,
-          timer: 2000
-          });
-      {% elif message.tags == 'warning' %}
-          Swal.fire({
-          icon: 'error',
-          title: '{{ message }}',
-          showConfirmButton: false,
-          timer: 2000
-          });
-      
-      {% elif message.tags == 'error' %}
-          Swal.fire({
-          icon: 'error',
-          title: '{{ message }}',
-          showConfirmButton: false,
-          timer: 2000
-          });
-      {% endif %}
-      {% endfor %}
-  {% endif %}
-</script>
 
 {% include 'layout_admin/footer.html' %} {% endblock content %}

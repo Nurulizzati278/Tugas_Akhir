@@ -1,0 +1,227 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+{% include 'layout_admin/navbar.html' %} 
+{% include 'layout_admin/sidebar.html' %}
+
+ <!-- Main Content -->
+ <div class="main-content">
+    <section class="section">
+      <div class="section-header">
+        <h1>Halaman Pengajuan Nilai Akreditasi </h1>
+        <div class="section-header-breadcrumb">
+          <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+          <div class="breadcrumb-item"><a href="#">Pengajuan Akreditasi</a></div>
+        </div>
+      </div>
+
+        <div class="section-body">
+            <h2 class="section-title">Pengajuan Akreditasi</h2>
+            <div class="row">
+                <div class="container">
+                    <div class="card">
+                    <form>
+                        <div class="card-body">
+                        <div class="form-group">
+                            <label>Komponen Mutu Guru</label>
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr class="table-success">
+                                  <th scope="col">No</th>
+                                  <th scope="col">Kondisi Ideal level 4 IASP 2020</th>
+                                  <th scope="col">Dokumen yang dibutuhkan</th>
+                                  <th scope="col">Dokumen Pendukung</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">19</th>
+                                  <td>Guru mampu:</br>
+                                    <br>(1) menyusun RPP yang memfasilitasi seluruh siswa belajar aktif, inovatif, kreatif, efektif, dan menyenangkan 
+                                            seperti: merancang penelitian sederhana, melakukan tugas proyek tertentu berdasarkan ide-ide siswa sendiri 
+                                            dan mengoptimalkan lingkungan sekitar sebagai sumber belajar serta memanfaatkan TIK atau cara lain yang 
+                                            sesuai dengan konteksnya,</br>
+                                    <br>(2) menjelaskan tahapan penyusunan RPP yang dibuatnya dengan memperhatikan hasil refleksi/evaluasi proses 
+                                            pembelajaran sebelumnya.</br>
+                                  </td>
+                                  <td>RPP SMK dan SMA tahun berjalan mapel B.Indonesia, matematika, B.Inggris, IPA, IPS (diwakili 3 tingkat)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                  <input type="file" class="form-control">
+                                  </td>
+                                  <td> </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">20</th>
+                                  <td>Guru melakukan evaluasi dan refleksi diri melalui berbagai kegiatan seperti observasi kelas dan pemberian kuesioner 
+                                    tentang pelaksanaan pembelajaran, rekaman audio atau video, dan hasilnya didiskusikan serta diseminasikan ke teman 
+                                    sejawat yang difasilitasi sekolah untuk perbaikan kinerja secara berkelanjutan yang terlihat pada perbaikan mutu 
+                                    pembelajaran dan capaian hasil belajar siswa.
+                                  </td>
+                                  <td>Laporan evaluasi dan refleksi diri (sampel laporan dari 3 orang guru mapel yang berbeda)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Laporan umpan balik dari siswa ( 3 orang guru dengan mapel yang berbeda)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Laporan umpan balik dari teman sejawat ( 3 orang guru dengan mapel yang berbeda)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Bukti daftar hadir/foto/bahan paparan kegiatan diseminasi hasil evaluasi diri dan refleksi</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                  <td>Laporan kegiatan guru dalam evaluasi dan refleksi diriberdasarkan hasil penilaian siswa, teman sejawat, kepala sekolah, 
+                                      hasil rekaman audio, video/cctv</br>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                    </div>
+                                      <input type="file" class="form-control">
+                                    <br>Dokumen kegiatan diseminasi hasil evaluasi dan reflesi guru kepada teman sejawaty yang difasilitasi oleh s/m 
+                                      (seperti daftar hadir, notulen, foto atau video)</br>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                    </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">21</th>
+                                  <td>Guru melakukan pengembangan profesi berkelanjutan atas inisiatif sendiri yang hasilnya berdampak terhadap 
+                                    peningkatan mutu pembelajaran dan capaian belajar siswa yang dilakukan melalui beragam bentuk kegiatan 
+                                    belajar melalui diskusi antarteman sejawat, KKG/MGMP atau sejenisnya, belajar daring, mengikuti diklat/seminar, 
+                                    publikasi ilmiah, karya inovatif dan membagikan praktik baik kepada orang lain di dalam dan di luar sekolah/madrasah 
+                                    baik secara lisan maupun tulisan melalui berbagai media.
+                                  </td>
+                                  <td>Laporan pengembangan profesi guru, undangan, surat tugas, daftar hasil, materi paparan, foto kegiatan dan laporan kegiatan</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                      <br>Dokumen kegiatan diseminasi hasil pengembangan profesi guru: makalah, video, buku, karya ilmiah, jurnal, paparan artikel dan panduan</br>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                    </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                  <td>Dokumen kegiatan pengembangan profesi guru </br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                      <br>Dokumen kegiatan diseminasi hasil pengembangan profesi guru</br>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                    </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">22</th>
+                                  <td>Guru mengembangkan/ memodifikasi strategi, model, metode, teknik, dan media pembelajaran inovatif dan kreatif yang 
+                                    dapat mendorong siswa belajar secara aktif, efektif, dan menyenangkan sesuai dengan tujuan pembelajaran serta 
+                                    menginspirasi teman sejawat dan/atau dapat diduplikasi oleh orang lain.
+                                  </td>
+                                  <td><br>RPP SMK dan SMA tahun berjalan mapel B.Indonesia, matematika, B.Inggris, IPA, IPS (diwakili 3 tingkat)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                  <td>RPP
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer text-right">
+                        <a class="btn btn-secondary" href=" {% url "pengajuan_akreditasi" %} ">Kembali</a>
+                        <a class="btn btn-primary" href=" {% url "komponen_manajemen_sekolah" %} ">Selanjutnya</a>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% include 'layout_admin/footer.html' %} {% endblock content %}

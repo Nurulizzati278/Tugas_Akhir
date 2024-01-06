@@ -1,0 +1,41 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+{% include 'layout_admin/navbar.html' %} 
+{% include 'layout_admin/sidebar.html' %}
+
+ <!-- Main Content -->
+ <div class="main-content">
+    <section class="section">
+      <div class="section-header">
+        <h1>Halaman Pengajuan Nilai Akreditasi </h1>
+        <div class="section-header-breadcrumb">
+          <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+          <div class="breadcrumb-item"><a href="#">Pengajuan Akreditasi</a></div>
+        </div>
+      </div>
+
+      <div class="section-body">
+        <h2 class="section-title">Pengajuan Nilai Akreditasi</h2>
+        <div class="row">
+          <div class="container">
+            <div class="card">
+              <form>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>Standar Tenaga Kependidikan</label>
+                    <input type="text" class="form-control" required="">
+                  </div>
+                <div class="card-footer text-right">
+                  <a class="btn btn-secondary" href=" {% url "standar_penilaian_pendidikan" %} ">Kembali</a>
+                  <a class="btn btn-primary" href=" {% url "standar_sarana_prasarana" %} ">Selanjutnya</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</div>
+    
+    {% include 'layout_admin/footer.html' %} {% endblock content %}

@@ -23,19 +23,58 @@
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <div class="row mb-4">
-                  <div class="col-12 col-md-6 col-lg-4">
-                    <div class="input-group">
-                      <input type="text" class="form-control" id="input-lat" placeholder="Latitude">
-                      <input type="text" class="form-control" id="input-lng" placeholder="Longitude">
+                <div class="row">
+                  <div class="col-lg-6 ">
+                    <div id="map" style="height: 430px;border-radius: 30px;">
+                      <!-- leaflet js-->
+                      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" />
+                      <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
+                      <!-- leaflet pluggin js-->
+                      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
+                      <!--fullscreen-->
+                      <link rel="stylesheet" href="https://unpkg.com/leaflet-fullscreen/dist/leaflet.fullscreen.css" />
+                      <script src="https://unpkg.com/leaflet-fullscreen/dist/Leaflet.fullscreen.min.js"></script>
+                      <script>
+                        var myMap = L.map("map").setView([5.549037601496668, 95.31928497494027],11);
+                        //var marker;
+                  
+                        // Tambahkan layer peta
+                        L.tileLayer("http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
+                          maxZoom: 20,
+                          subdomains: ["mt0", "mt1", "mt2", "mt3"],
+                        }).addTo(myMap);
+                        myMap.addControl(new L.Control.Fullscreen());
+
+
+                        // FeatureGroup is to store editable layers
+                        var drawnFeatures = new L.FeatureGroup();
+                        myMap.addLayer(drawnFeatures);
+
+                        var drawControl = new L.Control.Draw({
+                          edit: {
+                            featureGroup: drawnFeatures,
+                            edit: true,
+                            remove: true,
+
+                          }
+                        });
+                        myMap.addControl(drawControl);
+
+                        myMap.on("draw:created", function(e){
+                          var type = e.layerType;
+                          var layer = e.layer;
+                          drawnFeatures.addLayer(layer);
+                        });
+
+                      </script>
                     </div>
-                    <div class="card-footer text-right">
-                        <a class="btn btn-secondary" href=" {% url "penilaian" %} ">Kembali</a>
-                        <a class="btn btn-primary" href=" {% url "dashboard" %} ">Kirim</a>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary" href=" {% url "PengajuanSekolah" %} ">Kembali</a>
+                        <a class="btn btn-primary" href=" {% url "dashboard" %} ">Ajukan</a>
                     </div>
                   </div>
                 </div>
-                <div id="map" data-height="400"></div>
               </div>
             </div>
           </div>

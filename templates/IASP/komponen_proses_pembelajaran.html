@@ -1,0 +1,309 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+{% include 'layout_admin/navbar.html' %} 
+{% include 'layout_admin/sidebar.html' %}
+
+ <!-- Main Content -->
+ <div class="main-content">
+    <section class="section">
+      <div class="section-header">
+        <h1>Halaman Pengajuan Nilai Akreditasi </h1>
+        <div class="section-header-breadcrumb">
+          <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+          <div class="breadcrumb-item"><a href="#">Pengajuan Akreditasi</a></div>
+        </div>
+      </div>
+
+        <div class="section-body">
+            <h2 class="section-title">Pengajuan Akreditasi</h2>
+            <div class="row">
+                <div class="container">
+                    <div class="card">
+                    <form>
+                        <div class="card-body">
+                        <div class="form-group">
+                            <label>Komponen Proses Pembelajaran</label>
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr class="table-success">
+                                  <th scope="col">No</th>
+                                  <th scope="col">Kondisi Ideal level 4 IASP 2020</th>
+                                  <th scope="col">Dokumen yang dibutuhkan</th>
+                                  <th scope="col">Dokumen Pendukung</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">12</th>
+                                  <td>Dalam proses pembelajaran siswa diberi kesempatan untuk 
+                                    belajar secara aktif (membaca, bertanya, berdiskusi, praktik, 
+                                    atau menggunakan media), melibatkan keterampilan berpikir 
+                                    tingkat tinggi, dilaksanakan melalui pengalaman yang konkret, 
+                                    dan menyajikan materi yang lebih bermakna bagi kehidupan siswa 
+                                    serta berdampak pada pemecahan masalah kehidupan sehari-hari.
+                                  </td>
+                                  <td>RPP SMK dan SMA tahun berjalan mapel B.Indonesia, matematika, B.Inggris, IPA, IPS (diwakili 3 tingkat)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                  <td>Lembar Kerja Siswa</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">13</th>
+                                  <td>Guru melakukan penilaian proses dan hasil belajar dengan menggunakan 
+                                    berbagai teknik penilaian untuk mengetahui pencapaian tujuan pembelajaran 
+                                    secara sistemis dan berkesinambungan yang berdampak pada perbaikan proses 
+                                    pembelajaran dan hasil belajar siswa.
+                                  </td>
+                                  <td>RPP SMK dan SMA tahun berjalan mapel B.Indonesia, matematika, B.Inggris, IPA, IPS (diwakili 3 tingkat)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                  <td>Kisi-kisi soal dan istrumen penilaian (formatif dan sumatif)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                      <br>Hasil penilaian (formatif dan sumatif)</br>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                    </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">14</th>
+                                  <td>Guru melaksanakan program remedial dan/atau pengayaan (sesuai kebutuhan) 
+                                    secara sistematis, terstruktur, dan berkelanjutan dengan menggunakan berbagai 
+                                    strategi dan berpengaruh terhadap peningkatan hasil belajar siswa
+                                  </td>
+                                  <td>Analisis pencapaian kompetensi (tahun berjalan, untuk sampel mapel matematika, B.Indonesia, PPKN) dan Kejuruan (SMK)</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                  <br>Jadwal remedial dan pengayaan</br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                    </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                  <td>Daftar nilai hasil analisis pecapaian kompetensi </br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                      <br>Dokumen program pelaksanaan remedial dan pengayaan</br>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                    </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">15</th>
+                                  <td>Suasana pembelajaran dinamis dengan adanya interaksi antar siswa, interaksi 
+                                    siswa dengan guru, siswa antusias dalam belajar dan suasana kelas menyenangkan 
+                                    dan menarik sehingga berdampak pada pencapaian tujuan pembelajaran.
+                                  </td>
+                                  <td>Rencana Kerja Sekolah (RKS) 4 tahun</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                  </td>
+                                  <td> </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">16</th>
+                                  <td>Guru melakukan pembiasaan literasi membaca dan menulis di sekolah/madrasah yang berdampak pada 
+                                    (1) terbentuknya budaya membaca dan menulis di luar kelas, 
+                                    (2) menghasilkan karya-karya literasi seperti majalah dinding, cerpen, dan karya tulis lainnya, dan 
+                                    (3) terpublikasinya karya literasi siswa di masyarakat.
+                                  </td>
+                                  <td>Dokumen RKAS 1 Tahun</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                      <br>Dokumen RKS 4 Tahun</br>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                    </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                  <td>Dokumen program sekolah/madrasah terkait dengan pelaksanaan literasi membaca dan menulis</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                      <br>Dokumen publikasi dan lomba karya literasi siswa</br>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                    </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">17</th>
+                                  <td>Guru mengimplementasikan prosedur pembelajaran yang melibatkan siswa dalam menjaga keamanan, 
+                                    kenyamanan, kebersihan, dan kemudahan secara fisik maupun psikis dalam belajar siswa dengan 
+                                    membangun hubungan baik antarsiswa dan antara siswa dan guru yang saling menghormati dan menghargai 
+                                    sehingga tercapai tujuan pembelajaran.
+                                  </td>
+                                  <td> </td>
+                                  <td> </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">18</th>
+                                  <td>Proses pembelajaran memanfaatkan sarana dan prasarana yang ada di dalam dan di luar sekolah/madrasah 
+                                    baik yang tersedia maupun kreasi guru/siswa sebagai media dan sumber belajar yang berdampak terhadap 
+                                    peningkatan mutu pembelajaran dan capaian hasil belajar siswa.
+                                  </td>
+                                  <td>Daftar penggunaan sarana dan prasarana sebagai media dan sumber belajar</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                      <br>RPP SMK dan SMA tahun berjalan mapel B.Indonesia, matematika, B.Inggris, IPA, IPS (diwakili 3 tingkat)</br>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                    </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                  <td>RPP tentang penggunaan sarana dan prasarana sebagai media dan sumber belajar</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                    <input type="file" class="form-control">
+                                    <br>Daftar penggunaan sarana dan prasarana sebagai media dan sumber belajar</br>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required="">
+                                      <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"required="">
+                                      <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                  </div>
+                                      <input type="file" class="form-control">
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer text-right">
+                        <a class="btn btn-secondary" href=" {% url "pengajuan_akreditasi" %} ">Kembali</a>
+                        <a class="btn btn-primary" href=" {% url "komponen_mutu_guru" %} ">Selanjutnya</a>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% include 'layout_admin/footer.html' %} {% endblock content %}

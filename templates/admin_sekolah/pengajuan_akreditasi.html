@@ -1,0 +1,2201 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+{% include 'layout_admin/navbar.html' %} 
+{% include 'layout_admin/sidebar.html' %}
+
+ <!-- Main Content -->
+ <div class="main-content">
+    <section class="section">
+      <div class="section-header">
+        <h1>Halaman Pengajuan Nilai Akreditasi </h1>
+        <div class="section-header-breadcrumb">
+          <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+          <div class="breadcrumb-item"><a href="#">Pengajuan Akreditasi</a></div>
+        </div>
+      </div>
+
+      <div class="section-body">
+        <h2 class="section-title">Pengajuan Nilai Akreditasi</h2>
+
+        <div class="row">
+          <div class="container">
+            <div class="card">
+                <div class="card-body">
+                  <div class="form-group">
+                    <!-- start Section komponen mutu lulusan-->
+                      <!-- Formulir 1 -->
+                      <section id="formSection1">
+                          <h2>Komponen Mutu Lulusan</h2>
+                          <div class="container mt-3">
+                          <form>
+                            <!-- butir pertama -->
+                              <div class="mb-3">
+                                  <label class="form-label">1. Siswa menunjukkan perilaku disiplin yang membudaya
+                                    berdasarkan tata tertib sekolah/madrasah dan 
+                                    mendapat pengakuan atas prestasi kedisiplinan.</label>
+                              </div>
+                              <div class="mt-3">
+                                <div class="row">
+                                    <!-- Formulir Kiri -->
+                                    <div class="col-md-6">
+                                        <h2>Dokumen yang dibutuhkan</h2>
+                                        <form>
+                                            <div>
+                                              <label for="teksKiri" class="form-label">Tata Tertib (hak dan kewajiban)</label>
+                                            </div>      
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="ada1" id="inlineRadio1" value="option1" required="">
+                                              <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="tidak1" id="inlineRadio2" value="option2"required="">
+                                              <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                            </div>
+                                              <input type="file" class="form-control" required>
+                                        </form>
+                                    </div>
+                        
+                                    <!-- Formulir Kanan -->
+                                    <div class="col-md-6">
+                                        <h2>Dokumen Pendukung</h2>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="teksKanan" class="form-label">Buku Piket<br>Catatan guru/wali kelas</br></label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                  </div>
+                                </div>
+
+                            <!-- butir kedua -->
+                              <div class="mt-3">
+                                <div class="mb-3">
+                                    <label class="form-label">2. Siswa menunjukkan perilaku religius yang membudaya 
+                                      sesuai ajaran agama dan kepercayaan yang dianutnya 
+                                      dalam kehidupan sehari-hari di sekolah/madrasah.</label>
+                                </div>
+                              </div>
+                              <div class="mt-1">
+                                <div class="row">
+                                    <!-- Formulir Kiri -->
+                                    <div class="col-md-6">
+                                        <h2>Dokumen yang dibutuhkan</h2>
+                                        <form>
+                                            <div>
+                                              <label for="teksKiri" class="form-label">Laporan dan Jadwal Kegiatan Keagamaan</label>
+                                            </div>      
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="ada2" id="inlineRadio1" value="option1" required="">
+                                              <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="tidak2" id="inlineRadio2" value="option2"required="">
+                                              <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                            </div>
+                                              <input type="file" class="form-control" required>
+                                        </form>
+                                    </div>
+                        
+                                    <!-- Formulir Kanan -->
+                                    <div class="col-md-6">
+                                        <h2>Dokumen Pendukung</h2>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="teksKanan" class="form-label">Catatan guru/wali kelas</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              <button type="button" class="btn btn-primary mt-3" onclick="nextForm(2)">Lanjut</button>
+                          </form>
+                      </section>
+              
+                      <!-- Formulir 2 -->
+                      <section id="formSection2" style="display: none;">
+                        <h2>Komponen Mutu Lulusan</h2>
+                        <div class="container mt-3">
+                        <form>
+                          <!-- butir ketiga -->
+                            <div class="mb-3">
+                                <label class="form-label">3. Siswa menunjukkan perilaku tangguh dan bertanggung 
+                                  jawab yang membudaya dalam aktivitas sehari-hari 
+                                  di sekolah/madrasah.</label>
+                            </div>
+                            <div class="mt-3">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                      <form>
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Tata Tertib (hak dan kewajiban)</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada3" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak3" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                      <form>
+                                          <div class="mb-3">
+                                              <label for="teksKanan" class="form-label">Buku Piket<br>Catatan guru/wali kelas</br></label>
+                                          </div>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+
+                          <!-- butir keempat -->
+                            <div class="mt-3">
+                              <div class="mb-3">
+                                  <label class="form-label">4. Siswa membudayakan praktik bebas dari perundungan dan 
+                                    berperan aktif dalam program pencegahan perundungan 
+                                    di sekolah/madrasah.</label>
+                              </div>
+                            </div>
+                            <div class="mt-1">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                      <form>
+                                          <div class="mb-3">
+                                              <label for="teksKanan" class="form-label">Catatan guru/wali kelas/guru BK</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada4" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak4" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                        <input type="file" class="form-control" required>
+                                          <div class="mt-3 mb-3">
+                                            <label for="teksKanan" class="form-label">Laporan pencegahan perundungan, media afirmasi, bentuk poster, banner, spanduk</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada5" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak5" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                      </div>
+                                      <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+              
+                              <button type="button" class="btn btn-primary mt-3" onclick="prevForm(2)">Kembali</button>
+                              <button type="button" class="btn btn-primary mt-3" onclick="nextForm(3)">Lanjut</button>
+                          </form>
+                      </section>
+              
+                      <!-- Formulir 3 -->
+                      <section id="formSection3" style="display: none;">
+                        <h2>Komponen Mutu Lulusan</h2>
+                        <div class="container mt-3">
+                        <form>
+                          <!-- butir kelima -->
+                            <div class="mb-3">
+                                <label class="form-label">5. Siswa telah menunjukkan budaya berkomunikasi yang 
+                                  efektif dan beretika secara lisan dan tulisan melalui 
+                                  berbagai media yang memanfaatkan teknologi informasi dan 
+                                  komunikasi (TIK) di dalam dan di luar sekolah/madrasah</label>
+                            </div>
+                            <div class="mt-3">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                      <form>
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Laporan kegiatan pelaksaan program kreatif dan inovatif berupa ; video dan/atau foto hasil karya guru/siswa)</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada6" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak6" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Laporan hasil karya dan prestasi terkait keterampilan berkomunikasi yang efektif</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada7" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak7" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                      <form>
+                                          <div class="mb-3">
+                                              <label for="teksKanan" class="form-label">Portofolio tugas dan nilai yang diperoleh siswa, 
+                                                laporan hasil karya prestasi terkait keterampilan 
+                                                komunikasi secara lisan dan tertulis</label>
+                                          </div>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+
+                          <!-- butir keenam -->
+                            <div class="mt-3">
+                              <div class="mb-3">
+                                  <label class="form-label">6. Siswa telah menunjukkan budaya berkolaborasi yang 
+                                    terprogram dengan guru, tenaga kependidikan, atau 
+                                    siswa lainnya dalam bentuk kegiatan pembelajaran 
+                                    dan ekstrakurikuler serta penggunaan sumber daya belajar.</label>
+                              </div>
+                            </div>
+                            <div class="mt-1">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                      <form>
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Bukti dan/atau laporan kegiatan dengan ekstrakulikuler dalam bentuk: foto/video, kegiatan, undangan kegiatan, sertifikat keiikutsertaan</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada8" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak8" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Bukti dan/atau laporan kegiatan osis dalam bentuk: foto/video, kegiatan, undangan kegiatan, sertifikat keiikutsertaan</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada9" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak9" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+
+                                          <div>
+                                          <label for="teksKiri" class="form-label">Bukti dan/atau laporan kegiatan dengan pihak luar dalam bentuk: foto/video, kegiatan, undangan kegiatan, sertifikat keiikutsertaan</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada10" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak10" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+
+                                          <div>
+                                          <label for="teksKiri" class="form-label">Sertifikat prestasi, foto piagam/piala/medali</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada11" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak11" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                      <form>
+                                          <div class="mb-3">
+                                              <label for="teksKanan" class="form-label">Catatan penilaian sikap kerjasama, laporan kegiatan partisipasi siswa dalam kegiatan ekstrakulikuler dan OSIS, laporan kegiatan bersama diluar sekolah yang melibatkan siswa</label>
+                                          </div>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+              
+                              <button type="button" class="btn btn-primary mt-3" onclick="prevForm(3)">Kembali</button>
+                              <button type="button" class="btn btn-primary mt-3" onclick="nextForm(4)">Lanjut</button>
+                          </form>
+                      </section>
+
+                      <!-- Formulir 4 -->
+                      <section id="formSection4" style="display: none;">
+                        <h2>Komponen Mutu Lulusan</h2>
+                        <div class="container mt-3">
+                        <form>
+                          <!-- butir ketujuh -->
+                            <div class="mb-3">
+                                <label class="form-label">7. Siswa menunjukkan budaya berpikir kritis dan pemecahan masalah secara 
+                                  konsisten dan sistematis yang ditunjukkan melalui proses pembelajaran dan hasil karya siswa baik 
+                                  lisan maupun tulisan.</label>
+                            </div>
+                            <div class="mt-3">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                      <form>
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Laporan prestasi siswa</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada12" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak12" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                      <form>
+                                          <div class="mb-3">
+                                              <label for="teksKanan" class="form-label">Portofolio tugas dan nilai yang diperoleh siswa, laporan hasil karya 
+                                                prestasi terkait keterampilan berpikir kritis dan pemecahan masalah secara lisan dan tulisan</label>
+                                          </div>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+
+                          <!-- butir kedelapan -->
+                            <div class="mt-3">
+                              <div class="mb-3">
+                                  <label class="form-label">8. Siswa menunjukkan budaya kreatif dan inovatif secara konsisten yang ditunjukkan melalui proses pembelajaran dan hasil karya siswa dalam bentuk lisan, tulisan, dan/atau karya lainnya melalui kegiatan pembelajaran dan ekstrakurikuler di dalam dan di luar sekolah/madrasah.</label>
+                              </div>
+                            </div>
+                            <div class="mt-3">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                      <form>
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Laporan prestasi siswa</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada13" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak13" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Bukti keikutsertaan dalam kegiatan lomba yang terkait bakat minat siswa</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada14" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak14" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                      <form>
+                                          <div class="mb-3">
+                                              <label for="teksKanan" class="form-label">Portofolio tugas mencakup materi pengembangan kreatifitas inovasi 
+                                                dan nilai siswa, laporan pelaksanaan kegiatan keterampilan kreatifitas dan inovasi siswa mencakup karya dan 
+                                                prestasi serta dokumentasi kegiatan</br></label>
+                                          </div>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+
+                            <button type="button" class="btn btn-primary mt-3" onclick="prevForm(4)">Kembali</button>  
+                            <button type="button" class="btn btn-primary mt-3" onclick="nextForm(5)">Lanjut</button>
+                        </form>
+                    </section>
+                      
+                      <!-- Formulir 5 -->
+                      <section id="formSection5" style="display: none;">
+                        <h2>Komponen Mutu Lulusan</h2>
+                        <div class="container mt-3">
+                        <form>
+                          <!-- butir kesembilan -->
+                            <div class="mb-3">
+                                <label class="form-label">9. Siswa berpartisipasi dan berprestasi dalam berbagai kegiatan pengembangan minat dan bakat yang dibuktikan dengan perolehan berbagai prestasi/penghargaan tingkat lokal, nasional maupun internasional.</label>
+                            </div>
+                            <div class="mt-3">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                      <form>
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Laporan prestasi siswa</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada15" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak15" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Bukti keikutsertaan dalam kegiatan lomba yang terkait bakat minat siswa</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada16" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak16" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                      <form>
+                                          <div class="mb-3">
+                                              <label for="teksKanan" class="form-label">Laporan partisipasi siswa dalam lomba terkait minat bakat serta tautan medsos, laporan pretasi/penghargaan pengembangan minal bakat siswa serta medsos</label>
+                                          </div>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+
+                          <!-- butir kesepuluh -->
+                            <div class="mt-3">
+                              <div class="mb-3">
+                                  <label class="form-label">10. Siswa memiliki rata-rata nilai ujian sekolah/madrasah dan rapor kelas akhir yang meningkat secara konsisten dalam 3 (tiga) tahun terakhir dan berdampak pada persepsi positif masyarakat terhadap sekolah/madrasah.</label>
+                              </div>
+                            </div>
+                            <div class="mt-3">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                      <form>
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Data nilai ujian sekolah/madrasah dalam 3 (tiga) tahun terakhir</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada17" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak17" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                      <form>
+                                          <div class="mb-3">
+                                              <label for="teksKanan" class="form-label">Data nilai ujian sekolah/madrasah dalam 3 (tiga) tahun terakhir Leger nilai kelas akhir 3 (tiga) tahun terakhir</label>
+                                          </div>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- butir kesebelas -->
+                            <div class="mt-3">
+                              <div class="mb-3">
+                                  <label class="form-label">11. Pemangku kepentingan menyatakan sangat puas terhadap mutu lulusan sekolah/madrasah terkait sikap, pengetahuan, dan keterampilan mereka.</label>
+                              </div>
+                            </div>
+                            <div class="mt-3">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                      <form>
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Laporan hasil tracer study tentang kepuasan pemangku kepentingan</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada18" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak18" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                  </div>
+                                </div>
+                              </div>
+
+                            <button type="button" class="btn btn-primary mt-3" onclick="prevForm(5)">Kembali</button>  
+                            <button type="button" class="btn btn-primary mt-3" onclick="nextForm(6)">Lanjut</button>
+                          </form>
+                      </section>
+                    <!-- End of Section komponen mutu lulusan-->
+
+                    <!-- start Section komponen proses pembelajaran-->
+                      <!-- Formulir 6 -->
+                      <section id="formSection6" style="display: none;">
+                        <h2>Komponen Proses Pembelajaran</h2>
+                        <div class="container mt-3">
+                        <form>
+                          <!-- butir keduabelas -->
+                            <div class="mb-3">
+                                <label class="form-label">12. Dalam proses pembelajaran siswa diberi kesempatan untuk belajar secara aktif (membaca, bertanya, berdiskusi, praktik, atau menggunakan media), melibatkan keterampilan berpikir tingkat tinggi, dilaksanakan melalui pengalaman yang konkret, dan menyajikan materi yang lebih bermakna bagi kehidupan siswa serta berdampak pada pemecahan masalah kehidupan sehari-hari.</label>
+                            </div>
+                            <div class="mt-3">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                      <form>
+                                          <div>
+                                            <label for="teksKiri" class="form-label">RPP SMK dan SMA tahun berjalan mapel B.Indonesia, matematika, B.Inggris, IPA, IPS (diwakili 3 tingkat)</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada19" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak19" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                      <form>
+                                          <div class="mb-3">
+                                              <label for="teksKanan" class="form-label">Lembar Kerja Siswa</label>
+                                          </div>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+
+                          <!-- butir ketigabelas -->
+                            <div class="mt-3">
+                              <div class="mb-3">
+                                  <label class="form-label">13. Guru melakukan penilaian proses dan hasil belajar dengan menggunakan berbagai teknik penilaian untuk mengetahui pencapaian tujuan pembelajaran secara sistemis dan berkesinambungan yang berdampak pada perbaikan proses pembelajaran dan hasil belajar siswa.</label>
+                              </div>
+                            </div>
+                            <div class="mt-1">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                      <form>
+                                          <div>
+                                            <label for="teksKiri" class="form-label">RPP SMK dan SMA tahun berjalan mapel B.Indonesia, matematika, B.Inggris, IPA, IPS (diwakili 3 tingkat)</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada20" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak20" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                      <form>
+                                          <div class="mb-3">
+                                              <label for="teksKanan" class="form-label">Kisi-kisi soal dan istrumen penilaian (formatif dan sumatif)</label>
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Hasil penilaian (formatif dan sumatif)</label>
+                                        </div>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+
+                            <button type="button" class="btn btn-primary mt-3" onclick="prevForm(6)">Kembali</button>  
+                            <button type="button" class="btn btn-primary mt-3" onclick="nextForm(7)">Lanjut</button>
+                        </form>
+                    </section>
+            
+                    <!-- Formulir 7 -->
+                    <section id="formSection7" style="display: none;">
+                      <h2>Komponen Proses Pembelajaran</h2>
+                      <div class="container mt-3">
+                      <form>
+                        <!-- butir keempat belas -->
+                          <div class="mb-3">
+                              <label class="form-label">14. Guru melaksanakan program remedial dan/atau pengayaan (sesuai kebutuhan) secara sistematis, terstruktur, dan berkelanjutan dengan menggunakan berbagai strategi dan berpengaruh terhadap peningkatan hasil belajar siswa</label>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Analisis pencapaian kompetensi (tahun berjalan, untuk sampel mapel matematika, B.Indonesia, PPKN) dan Kejuruan (SMK)</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada21" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak21" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Jadwal remedial dan pengayaan</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada22" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak22" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Daftar nilai hasil analisis pecapaian kompetensi</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Dokumen program pelaksanaan remedial dan pengayaan</label>
+                                      </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                        <!-- butir kelima belas -->
+                          <div class="mt-3">
+                            <div class="mb-3">
+                                <label class="form-label">15. Suasana pembelajaran dinamis dengan adanya interaksi antar siswa, interaksi siswa dengan guru, siswa antusias dalam belajar dan suasana kelas menyenangkan dan menarik sehingga berdampak pada pencapaian tujuan pembelajaran.</label>
+                            </div>
+                          </div>
+                          <div class="mt-1">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                      <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Rencana Kerja Sekolah (RKS) 4 tahun</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="ada23" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tidak23" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                    </div>
+                                    <input type="file" class="form-control" required>
+                                  </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                </div>
+                              </div>
+                            </div>
+            
+                            <button type="button" class="btn btn-primary mt-3" onclick="prevForm(7)">Kembali</button>
+                            <button type="button" class="btn btn-primary mt-3" onclick="nextForm(8)">Lanjut</button>
+                        </form>
+                    </section>
+            
+                    <!-- Formulir 8 -->
+                    <section id="formSection8" style="display: none;">
+                      <h2>Kompetensi Proses Pembelajaran</h2>
+                      <div class="container mt-3">
+                      <form>
+                        <!-- butir keenam belas -->
+                          <div class="mb-3">
+                              <label class="form-label">16. Guru melakukan pembiasaan literasi membaca dan menulis di sekolah/madrasah yang berdampak pada (1) terbentuknya budaya membaca dan menulis di luar kelas, (2) menghasilkan karya-karya literasi seperti majalah dinding, cerpen, dan karya tulis lainnya, dan (3) terpublikasinya karya literasi siswa di masyarakat.</label>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen RKAS 1 Tahun</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada24" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak24" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen RKS 4 Tahun</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada25" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak25" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Dokumen program sekolah/madrasah terkait dengan pelaksanaan literasi membaca dan menulis</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Dokumen publikasi dan lomba karya literasi siswa</label>
+                                      </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                        <!-- butir ketujuh belas -->
+                          <div class="mt-3">
+                            <div class="mb-3">
+                                <label class="form-label">17. Guru mengimplementasikan prosedur pembelajaran yang melibatkan siswa dalam menjaga keamanan, kenyamanan, kebersihan, dan kemudahan secara fisik maupun psikis dalam belajar siswa dengan membangun hubungan baik antarsiswa dan antara siswa dan guru yang saling menghormati dan menghargai sehingga tercapai tujuan pembelajaran.</label>
+                            </div>
+                          </div>
+                          <div class="mt-1">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- butir kedelapan belas -->
+                          <div class="mt-3 mb-3">
+                            <label class="form-label">18. Proses pembelajaran memanfaatkan sarana dan prasarana yang ada di dalam dan di luar sekolah/madrasah baik yang tersedia maupun kreasi guru/siswa sebagai media dan sumber belajar yang berdampak terhadap peningkatan mutu pembelajaran dan capaian hasil belajar siswa.</label>
+                        </div>
+                        <div class="mt-3">
+                          <div class="row">
+                              <!-- Formulir Kiri -->
+                              <div class="col-md-6">
+                                  <h2>Dokumen yang dibutuhkan</h2>
+                                  <form>
+                                      <div>
+                                        <label for="teksKiri" class="form-label">Daftar penggunaan sarana dan prasarana sebagai media dan sumber belajar</label>
+                                      </div>      
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="ada26" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tidak26" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                      </div>
+                                        <input type="file" class="form-control" required>
+
+                                      <div>
+                                        <label for="teksKiri" class="form-label">RPP SMK dan SMA tahun berjalan mapel B.Indonesia, matematika, B.Inggris, IPA, IPS (diwakili 3 tingkat)</label>
+                                      </div>      
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="ada27" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tidak27" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                      </div>
+                                        <input type="file" class="form-control" required>
+                                  </form>
+                              </div>
+                  
+                              <!-- Formulir Kanan -->
+                              <div class="col-md-6">
+                                  <h2>Dokumen Pendukung</h2>
+                                  <form>
+                                      <div class="mb-3">
+                                        <label for="teksKanan" class="form-label">RPP tentang penggunaan sarana dan prasarana sebagai media dan sumber belajar</label>
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="teksKanan" class="form-label">Daftar penggunaan sarana dan prasarana sebagai media dan sumber belajar</label>
+                                    </div>
+                                  </form>
+                              </div>
+                            </div>
+                          </div>
+            
+                            <button type="button" class="btn btn-primary mt-3" onclick="prevForm(8)">Kembali</button>
+                            <button type="button" class="btn btn-primary mt-3" onclick="nextForm(9)">Lanjut</button>
+                        </form>
+                    </section>
+                  <!-- End of Section Komponen Proses Pembelajaran -->
+
+                  <!-- Start Section Komponen Mutu Guru -->
+                    <!-- Formulir 9 -->
+                    <section id="formSection9" style="display: none;">
+                      <h2>Komponen Mutu Guru </h2>
+                      <div class="container mt-3">
+                      <form>
+                        <!-- butir kesembilan belas -->
+                          <div class="mb-3">
+                              <label class="form-label">19. Guru Mampu :</label>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">(1) menyusun RPP yang memfasilitasi seluruh siswa belajar aktif, inovatif, kreatif, efektif, dan menyenangkan 
+                              seperti: merancang penelitian sederhana, melakukan tugas proyek tertentu berdasarkan ide-ide siswa sendiri 
+                              dan mengoptimalkan lingkungan sekitar sebagai sumber belajar serta memanfaatkan TIK atau cara lain yang 
+                              sesuai dengan konteksnya,</label>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">(2) menjelaskan tahapan penyusunan RPP yang dibuatnya dengan memperhatikan hasil refleksi/evaluasi proses 
+                              pembelajaran sebelumnya.</label>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">RPP SMK dan SMA tahun berjalan mapel B.Indonesia, matematika, B.Inggris, IPA, IPS (diwakili 3 tingkat)</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada28" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak28" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">RPP</label>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                        <!-- butir kedua puluh -->
+                          <div class="mt-3">
+                            <div class="mb-3">
+                                <label class="form-label">20. Guru melakukan evaluasi dan refleksi diri melalui berbagai kegiatan seperti observasi kelas dan pemberian kuesioner tentang pelaksanaan pembelajaran, rekaman audio atau video, dan hasilnya didiskusikan serta diseminasikan ke teman sejawat yang difasilitasi sekolah untuk perbaikan kinerja secara berkelanjutan yang terlihat pada perbaikan mutu pembelajaran dan capaian hasil belajar siswa.</label>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Laporan evaluasi dan refleksi diri (sampel laporan dari 3 orang guru mapel yang berbeda)</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada29" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak29" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Laporan umpan balik dari siswa ( 3 orang guru dengan mapel yang berbeda)</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada30" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak30" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Laporan umpan balik dari teman sejawat ( 3 orang guru dengan mapel yang berbeda)</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada31" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak31" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                          
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Bukti daftar hadir/foto/bahan paparan kegiatan diseminasi hasil evaluasi diri dan refleksi</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada32" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak32" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Laporan kegiatan guru dalam evaluasi dan refleksi diriberdasarkan hasil penilaian siswa, teman sejawat, kepala sekolah, hasil rekaman audio, video/cctv</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Dokumen kegiatan diseminasi hasil evaluasi dan reflesi guru kepada teman sejawaty yang difasilitasi oleh s/m (seperti daftar hadir, notulen, foto atau video)</label>
+                                      </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                          <button type="button" class="btn btn-primary mt-3" onclick="prevForm(9)">Kembali</button>  
+                          <button type="button" class="btn btn-primary mt-3" onclick="nextForm(10)">Lanjut</button>
+                      </form>
+                  </section>
+                    
+                    <!-- Formulir 10 -->
+                    <section id="formSection10" style="display: none;">
+                      <h2>Standar Kompetensi Lulusan</h2>
+                      <div class="container mt-3">
+                      <form>
+                        <!-- butir kedua puluh satu -->
+                          <div class="mb-3">
+                              <label class="form-label">21. Guru melakukan pengembangan profesi berkelanjutan atas inisiatif sendiri yang hasilnya berdampak terhadap 
+                                peningkatan mutu pembelajaran dan capaian belajar siswa yang dilakukan melalui beragam bentuk kegiatan 
+                                belajar melalui diskusi antarteman sejawat, KKG/MGMP atau sejenisnya, belajar daring, mengikuti diklat/seminar, 
+                                publikasi ilmiah, karya inovatif dan membagikan praktik baik kepada orang lain di dalam dan di luar sekolah/madrasah 
+                                baik secara lisan maupun tulisan melalui berbagai media.</label>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Laporan pengembangan profesi guru, undangan, surat tugas, daftar hasil, materi paparan, foto kegiatan dan laporan kegiatan</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada33" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak33" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen kegiatan diseminasi hasil pengembangan profesi guru: makalah, video, buku, karya ilmiah, jurnal, paparan artikel dan panduan</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada34" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak34" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Dokumen kegiatan pengembangan profesi guru</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Dokumen kegiatan diseminasi hasil pengembangan profesi guru</label>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                        <!-- butir kedua puluh dua -->
+                          <div class="mt-3">
+                            <div class="mb-3">
+                                <label class="form-label">22. Guru mengembangkan/ memodifikasi strategi, model, metode, teknik, dan media pembelajaran inovatif dan kreatif yang 
+                                  dapat mendorong siswa belajar secara aktif, efektif, dan menyenangkan sesuai dengan tujuan pembelajaran serta 
+                                  menginspirasi teman sejawat dan/atau dapat diduplikasi oleh orang lain.</label>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">RPP SMK dan SMA tahun berjalan mapel B.Indonesia, matematika, B.Inggris, IPA, IPS (diwakili 3 tingkat)</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada35" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak35" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">RPP</label>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                          <button type="button" class="btn btn-primary mt-3" onclick="prevForm(10)">Kembali</button>  
+                          <button type="button" class="btn btn-primary mt-3" onclick="nextForm(11)">Lanjut</button>
+                        </form>
+                    </section>
+                  <!-- End of Section Komponen Mutu Guru-->
+
+                  <!-- start Section komponen Manajemen Sekolah-->
+                      <!-- Formulir 11 -->
+                      <section id="formSection11" style="display: none;">
+                        <h2>Komponen Manajemen Sekolah</h2>
+                        <div class="container mt-3">
+                        <form>
+                          <!-- butir kedua puluh tiga -->
+                            <div class="mb-3">
+                                <label class="form-label">23. Sekolah/madrasah mengembangkan, menyosialisasikan, mengimplementasikan dan mengevaluasi visi, misi, dan tujuan yang melibatkan pemangku kepentingan dan hasil evaluasi dipergunakan untuk perbaikan dan peningkatan mutu sekolah/madrasah secara berkelanjutan.</label>
+                            </div>
+                            <div class="mt-3">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                      <form>
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Daftar hadir rapat pengembangan visi misi</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada36" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak36" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+
+                                          <div>
+                                            <label for="teksKiri" class="form-label">2 laporan kegiatan yang merupakan implementasi visi misi</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada37" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak37" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Dokumen hasil evaluasi tahunan pencapaian visi, misi, tujuan dan rencana sekolah</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada38" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak38" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Dokumen rekomendasi dari hasil evaluasi (notulen rapat)</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada39" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak39" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Dokumen visi misi versi sebelumnya dan versi setelah perbaikan berdasarkan rekomendasi</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada40" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak40" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                      <form>
+                                          <div class="mb-3">
+                                              <label for="teksKanan" class="form-label">Dokumen rapat penyusunan RKS/RKAS/RAPBS/Pengembangan sekolah dan RKS 2 periode</label>
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Dokumen sosialisasi visi misi</label>
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Laporan kegiatan pelaksanaan program</label>
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Dokumen hasil evaluasi dan hasil evaluasi tahunan pencapaian visi misi tujuan dan rencana sekolah</label>
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Dokumen rekomendasi dari hasil evaluasi (notulen rapat)</label>
+                                          </div>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+
+                          <!-- butir kedua puluh empat -->
+                            <div class="mt-3">
+                              <div class="mb-3">
+                                  <label class="form-label">24. Kepala sekolah/madrasah merencanakan, melaksanakan, mengevaluasi, 
+                                    dan melakukan tindak lanjut atas hasil supervisi akademik kepada 
+                                    guru secara berkelanjutan dan berdampak signifikan terhadap peningkatan 
+                                    kinerja guru serta pembelajaran yang bermutu.</label>
+                              </div>
+                            </div>
+                            <div class="mt-1">
+                              <div class="row">
+                                  <!-- Formulir Kiri -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen yang dibutuhkan</h2>
+                                      <form>
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Jadwal supervisi kepala sekolah/wakil kepala sekolah (3 tahun terakhir)</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada41" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak41" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+
+                                          <div>
+                                            <label for="teksKiri" class="form-label">Dokumen hasil observasi kepala sekolah terhadap guru di kelas 3 (tiga) tahun terakhir, 
+                                              lembar observasi atau catatan lain (kualitatif) (SMA mapel IPA (salahsatu), IPS (salah satu), 
+                                              matematika, B.Inggris, B.Indonesia dan PPKN)</label>
+                                          </div>      
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ada42" id="inlineRadio1" value="option1" required="">
+                                            <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tidak42" id="inlineRadio2" value="option2"required="">
+                                            <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                          </div>
+                                            <input type="file" class="form-control" required>
+                                      </form>
+                                  </div>
+                      
+                                  <!-- Formulir Kanan -->
+                                  <div class="col-md-6">
+                                      <h2>Dokumen Pendukung</h2>
+                                      <form>
+                                          <div class="mb-3">
+                                              <label for="teksKanan" class="form-label">Program/rencana pelaksanaan supervisi dan surat penugasan supervisor</label>
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Dokumen hasil supervisi 3 tahun terakhir</label>
+                                          </div>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <button type="button" class="btn btn-primary mt-3" onclick="prevForm(11)">Kembali</button>
+                              <button type="button" class="btn btn-primary mt-3" onclick="nextForm(12)">Lanjut</button>
+                        </form>
+                    </section>
+            
+                    <!-- Formulir 12 -->
+                    <section id="formSection12" style="display: none;">
+                      <h2>Komponen Manajemen Sekolah</h2>
+                      <div class="container mt-3">
+                      <form>
+                        <!-- butir kedua puluh lima -->
+                          <div class="mb-3">
+                              <label class="form-label">25. Kepala sekolah/madrasah memimpin guru, tenaga kependidikan, 
+                                dan siswa untuk mengembangkan ide-ide kreatif dan inovatif yang 
+                                dituangkan dalam RKS/RKAS yang dalam penyusunannya melibatkan warga 
+                                sekolah/madrasah dan pemangku kepentingan lainnya serta diimplementasikan 
+                                secara konsisten dan efektif, akuntabel, dan transparan berdampak 
+                                nyata pada pengembangan sekolah/madrasah.</label>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Daftar hadir rapat RKS/RKAS dan notulen</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada43" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak43" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Laporan kegiatan pelaksanaan program yang melibatkan warga sekolah dan pemangku kepentingan, bisa berupa: video dan/atau foto</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada44" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak44" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Laporan kegiatan pelaksaan program kreatif dan inovatif berupa ; video dan/atau foto hasil karya guru/siswa</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada45" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak45" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Dokumen RKS/RKAS 2 periode dan dokumen rapat penyusunan RKS/RKAS</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Laporan kegiatan pelaksanaan program</label>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                        <!-- butir kedua puluh enam -->
+                        <div class="mt-3">
+                          <div class="mb-3">
+                              <label class="form-label">26. Sekolah/madrasah menunjukkan komunikasi dan interaksi antara siswa, 
+                                guru, dan warga sekolah/madrasah, orang tua dan masyarakat sekitar 
+                                secara harmonis dan berdampak pada terciptanya budaya kerja sama yang kuat.</label>
+                          </div>
+                        </div>
+                        <div class="mt-1">
+                          <div class="row">
+                              <!-- Formulir Kiri -->
+                              <div class="col-md-6">
+                                  <h2>Dokumen yang dibutuhkan</h2>
+                                  <form>
+                                      <div>
+                                        <label for="teksKiri" class="form-label">Dokumen kerja sama s/m dengan orangtua siswa, masyarakat sekitar 
+                                          (notulen rapat, daftar hadir rapat, foto/video)</label>
+                                      </div>      
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="ada48" id="inlineRadio1" value="option1" required="">
+                                        <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tidak48" id="inlineRadio2" value="option2"required="">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                      </div>
+                                        <input type="file" class="form-control" required>
+                                  </form>
+                              </div>
+                  
+                              <!-- Formulir Kanan -->
+                              <div class="col-md-6">
+                                  <h2>Dokumen Pendukung</h2>
+                                  <form>
+                                      <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Dokumen kerja sama s/m dengan orangtua siswa, masyarakat sekitar 
+                                            (notulen rapat, daftar hadir rapat, foto/video)</label>
+                                      </div>
+                                  </form>
+                              </div>
+                            </div>
+                          </div>
+          
+                          <button type="button" class="btn btn-primary mt-3" onclick="prevForm(12)">Kembali</button>
+                          <button type="button" class="btn btn-primary mt-3" onclick="nextForm(13)">Lanjut</button>
+                      </form>
+                  </section>
+            
+                    <!-- Formulir 13 -->
+                    <section id="formSection13" style="display: none;">
+                      <h2>Komponen Manajemen Sekolah</h2>
+                      <div class="container mt-3">
+                      <form>
+                        <!-- butir kelima -->
+                          <div class="mb-3">
+                              <label class="form-label">27. Sekolah/madrasah menunjukkan suasana aman, tertib, bersih, 
+                                dan nyaman bagi seluruh warga sekolah/madrasah untuk menciptakan 
+                                lingkungan sekolah/madrasah yang kondusif dan berdampak pada 
+                                persepsi positif masyarakat terhadap sekolah/madrasah.</label>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen pelaksanaan kegiatan kebersihan s/m, misalnya dokumen 
+                                            pembagian tugas di bidang kebersihan, jadwal kebersihan dan dokumentasi</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada47" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak47" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Dokumen pelaksanaan kegiatan kebersihan s/m, misalnya dokumen 
+                                              pembagian tugas di bidang kebersihan, jadwal kebersihan dan dokumentasi kegiatan</label>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                        <!-- butir kedua puluh delapan -->
+                          <div class="mt-3">
+                            <div class="mb-3">
+                                <label class="form-label">28. Manajemen dan komite sekolah/madrasah merupakan mitra setara, 
+                                  yang terlihat pada kepedulian dan pemahaman komite sekolah/madrasah 
+                                  terhadap kondisi, masalah, dan tantangan yang sedang dihadapi 
+                                  sekolah/madrasah dan menjadikannya sebagai tantangan bersama. 
+                                  Pertemuan komite dengan manajemen sekolah/madrasah dapat terjadi 
+                                  sewaktu-waktu atas inisiatif salah satu pihak. Keterlibatan tokoh 
+                                  masyarakat dalam perencanaan, pelaksanaan, dan pengawasan program-program 
+                                  sekolah/madrasah terjadi atas inisiatif komite maupun manajemen sekolah/madrasah 
+                                  serta berdampak pada persepsi positif masyarakat terhadap sekolah/madrasah.</label>
+                            </div>
+                          </div>
+                          <div class="mt-1">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen RKAS 1 Tahun</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada48" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak48" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen RKAS 4 Tahun</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada49" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak49" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                        <label for="teksKiri" class="form-label">Daftar hadir rapat RKS/RKAS dan notulen</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada50" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak50" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Dokumen rapat penyusunan RKS/RKAS/RAPBS/Pengembangan s/m</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Laporan kegiatan penyusunan perencanaan dan pengawasan program s/m</label>
+                                      </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+            
+                            <button type="button" class="btn btn-primary mt-3" onclick="prevForm(13)">Kembali</button>
+                            <button type="button" class="btn btn-primary mt-3" onclick="nextForm(14)">Lanjut</button>
+                        </form>
+                    </section>
+
+                    <!-- Formulir 14 -->
+                    <section id="formSection14" style="display: none;">
+                      <h2>Komponen Manajemen Sekolah</h2>
+                      <div class="container mt-3">
+                      <form>
+                        <!-- butir kedua puluh sembilan -->
+                          <div class="mb-3">
+                              <label class="form-label">29. Sekolah/madrasah mengembangkan kurikulum tingkat satuan pendidikan dengan 
+                                melibatkan para pemangku kepentingan, serta mengimplementasikan dan mengevaluasi 
+                                secara sistematis, kreatif, inovatif, dan efektif yang berkesinambungan serta
+                                 berdampak pada peningkatan prestasi siswa.</label>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">RPP SMK dan SMA tahun berjalan mapel B.Indonesia, matematika, B.Inggris, IPA, IPS (diwakili 3 tingkat)</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada51" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak51" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Notulen raker /pertemuan penyusunan kurikulum s/m, daftar hadir</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada52" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak52" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen raker/rapat evaluasi kurikulum yang berisi rekomendasi perbaikan hasil evaluasi</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada53" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak53" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Notula raker/pertemuan penyusunan kurikulum s/m dan renstra atau rencana pengembangan kurikulum</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Program/panduan pembelajaran s/m</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Dokumen raker/rapat evaluasi yang berisi rekomendasi perbaikan hasil evaluasi</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Buku leger atau rekap nilai</label>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                        <!-- butir ketida puluh -->
+                          <div class="mt-3">
+                            <div class="mb-3">
+                                <label class="form-label">30. Sekolah/madrasah menerapkan secara konsisten pengelolaan guru dan 
+                                  tenaga kependidikan yang komprehensif, efektif, efisien, dan akuntabel 
+                                  pada kegiatan rekrutmen, seleksi, penugasan, pengembangan kompetensi, 
+                                  penilaian kinerja, dan pemberian penghargaan/sanksi yang berdampak terhadap 
+                                  persepsi positif pemangku kepentingan, iklim kerja yang kondusif, dan peningkatan kinerja.</label>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Panduan atau SOP pelaksanaan tugas guru/tenaga kependidikan</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada54" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak54" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Jadwal mengajar guru, penugasan lain yang dibebankan kepada guru dan pembagian tugas tenaga kependidikan</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada55" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak55" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen penilaian kinerja guru berupa format penilaian kinerja</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada56" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak56" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Hasil penilaian kinerja guru</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada57" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak57" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen penilaian kinerja tenaga kependidikan berupa format penilaian kinerja</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada58" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak58" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Hasil penilaian kinerja tenaga kependidikan</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada59" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak59" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Bukti penghargaan/sanksi seperti: piagam, sertifikat, foto, video, surat peringatan , SK, surat teguran, buku/catatan pelanggaran dsb</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada60" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak60" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                      <div class="mb-3">
+                                        <label for="teksKanan" class="form-label">Panduan atau SOP pelaksanaan tugas guru/tenaga kependidikan dan dokumen penugasan guru/tenaga kependidikan</label>
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="teksKanan" class="form-label">Dokumen penilaian kinerja</label>
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="teksKanan" class="form-label">Panduan atau SOP pelaksanaan tugas guru/tenaga kependidikan dan bukti penghargaan/sanksi</label>
+                                      </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                          <button type="button" class="btn btn-primary mt-3" onclick="prevForm(14)">Kembali</button>  
+                          <button type="button" class="btn btn-primary mt-3" onclick="nextForm(15)">Lanjut</button>
+                      </form>
+                  </section>
+                    
+                    <!-- Formulir 15 -->
+                    <section id="formSection15" style="display: none;">
+                      <h2>Komponen Manajemen Sekolah</h2>
+                      <div class="container mt-3">
+                      <form>
+                        <!-- butir ketiga puluh satu -->
+                          <div class="mb-3">
+                              <label class="form-label">31. Sekolah/madrasah mengelola sarana dan prasarana secara konsisten dan 
+                                efisien dengan melibatkan semua warga sekolah/madrasah dan pemangku kepentingan 
+                                lainnya dalam pelaksanaan prosedur penggunaan dan pemeliharaan yang hasilnya 
+                                terlihat pada sarana dan prasarana yang berkondisi baik, bersih, rapi, aman, 
+                                nyaman, dan mudah diakses sehingga berdampak positif terhadap proses 
+                                pembelajaran yang efektif.</label>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Panduan /SOP Pengelolaan sarana dan prasarana (data inventaris sarana dan prasarana, mulai dari perencanaan sampai penghapusan)</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada61" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak61" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Panduan /SOP Pengelolaan sarana dan prasarana</label>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                        <!-- butir ketiga puluh dua -->
+                          <div class="mt-3">
+                            <div class="mb-3">
+                                <label class="form-label">32. Sekolah/madrasah menyusun perencanaan program dan anggaran pendapatan dan 
+                                  belanja sekolah/madrasah berdasarkan evaluasi diri sekolah/madrasah dengan 
+                                  melibatkan komite sekolah/madrasah. Realisasi penggunaan anggaran dan belanja 
+                                  dilakukan berdasarkan perencanaan yang telah disusun. Laporan keuangan disusun
+                                  secara periodik dengan prinsip transparan dan akuntabel berdasarkan peraturan 
+                                  yang berlaku dan disampaikan ke pihak yang berkepentingan baik di dalam maupun 
+                                  di luar sekolah. Laporan akhir keuangan diaudit secara internal atau eksternal 
+                                  dengan hasil baik.</label>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen rapat penyusunan RAPBS, berupa daftar hadir, notulen rapat</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada62" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak62" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">RAPBS</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada63" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak63" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Laporan keuangan 1 tahun terakhir</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada64" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak64" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Hasil catatan audit internal atau eksternal 3 tahun terakhir</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada65" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak65" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">RAPBS</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">EDS/M</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Dokumen rapat penyusunan RKS/RKAS/RAPBS/Pengembangan s/m</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Laporan kegiatan pelaksanaan dan pengawasan program s/m dan dokumen audit pelaksanaan anggaran/RAPBS</label>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                          <button type="button" class="btn btn-primary mt-3" onclick="prevForm(15)">Kembali</button>  
+                          <button type="button" class="btn btn-primary mt-3" onclick="nextForm(16)">Lanjut</button>
+                        </form>
+                    </section>
+
+                    <!-- Formulir 16 -->
+                    <section id="formSection16" style="display: none;">
+                      <h2>Komponen Manajemen Sekolah</h2>
+                      <div class="container mt-3">
+                      <form>
+                        <!-- butir ketiga puluh tiga -->
+                          <div class="mb-3">
+                              <label class="form-label">33. Sekolah/madrasah menyelenggarakan kegiatan ekstrakurikuler dan 
+                                mengikutsertakan siswa dalam berbagai kompetisi serta mendapatkan 
+                                dukungan fasilitas dari sekolah/madrasah, orang tua dan masyarakat 
+                                yang menghasilkan berbagai prestasi.</label>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen program/kegiatan ekstrakulikuler, berupa: foto dan/atau video, laporan kegiatan, jadwal kegiatan</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada19" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak19" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Surat tugas pembina dan tim lomba/kompetensi siswa, undangan keikutsertaan, foto, sertifikat keikutsertaan</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada19" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak19" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Sertifikat prestasi, foto piagam/piala/medali</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada19" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak19" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Dokumen program/kegiatan ekstrakurikuler</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Surat tugas pembina dan tim lomba/kompetisi</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Bukti prestasi (piagam dan/atau piala)</label>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                        <!-- butir ketiga puluh empat -->
+                          <div class="mt-3">
+                            <div class="mb-3">
+                                <label class="form-label">34. Sekolah/madrasah memberikan layanan bimbingan dan konseling dalam bidang 
+                                  pribadi, sosial, akademik, pendidikan lanjut, dan/atau karier untuk 
+                                  mendukung pencapaian dan pengembangan prestasi secara berkelanjutan 
+                                  dengan dukungan SDM yang berkualitas.</label>
+                            </div>
+                          </div>
+                          <div class="mt-1">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen program layanan BK dalam bidang: pengembangan pribadi, sosial, akademik dan pendidikan</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada20" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak20" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen laporan layanan BK dalam bidang: pengembangan pribadi, sosial, akademik dan pendidikan</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada20" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak20" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Dokumen program layanan BK dalam bidang pengembangan pribadi dan Dokumen laporan layanan BK dalam bidang pengembangan pribadi</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Dokumen program layanan BK dalam bidang pengembangan sosial dan Dokumen laporan layanan BK dalam bidang pengembangan sosial</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Dokumen program layanan BK dalam bidang pengembangan akademik dan Dokumen laporan layanan BK dalam bidang pengembangan akademik</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Dokumen program layanan BK dalam bidang pendidikan lanjut dan/atau karier dan Dokumen laporan layanan BK dalam bidang pendidikan lanjut dan/atau karier</label>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                          <button type="button" class="btn btn-primary mt-3" onclick="prevForm(16)">Kembali</button>  
+                          <button type="button" class="btn btn-primary mt-3" onclick="nextForm(17)">Lanjut</button>
+                      </form>
+                    </section>
+
+                    <!-- Formulir 17 -->
+                    <section id="formSection17" style="display: none;">
+                      <h2>Komponen Manajemen Sekolah</h2>
+                      <div class="container mt-3">
+                      <form>
+                        <!-- butir ketiga puluh tiga -->
+                          <div class="mb-3">
+                              <label class="form-label">35. Sekolah/madrasah menyusun RKA-S/M dengan merujuk rapor mutu dan hasil 
+                                EDS/M, melakukan evaluasi pelaksanaan program dalam RKA-S/M, menyusun 
+                                rencana perbaikan RKA-S/M tahun berikutnya, dan melakukan tindakan 
+                                perbaikan secara berkelanjutan.</label>
+                          </div>
+                          <div class="mt-3">
+                            <div class="row">
+                                <!-- Formulir Kiri -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen yang dibutuhkan</h2>
+                                    <form>
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen RKA-S/M tahun sebelumnya</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada19" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak19" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+
+                                        <div>
+                                          <label for="teksKiri" class="form-label">Dokumen evaluasi diri s/m tahun sebelumnya</label>
+                                        </div>      
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="ada19" id="inlineRadio1" value="option1" required="">
+                                          <label class="form-check-label" for="inlineRadio1">Ada</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="tidak19" id="inlineRadio2" value="option2"required="">
+                                          <label class="form-check-label" for="inlineRadio2">Tidak Ada</label>
+                                        </div>
+                                          <input type="file" class="form-control" required>
+                                    </form>
+                                </div>
+                    
+                                <!-- Formulir Kanan -->
+                                <div class="col-md-6">
+                                    <h2>Dokumen Pendukung</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="teksKanan" class="form-label">Dokumen evaluasi diri s/m</label>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="teksKanan" class="form-label">Dokumen RKA s/m dan dokumen EDS/M</label>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+
+                          <button type="button" class="btn btn-primary mt-3" onclick="prevForm(16)">Kembali</button>  
+                          <button type="submit" class="btn btn-primary mt-3">Kirim</button>
+                      </form>
+                    </section>
+                  <!-- End of Section Komponen Manajemen Sekolah-->
+                  </div>
+
+              
+                  <!-- Bootstrap JS (diperlukan untuk beberapa fitur Bootstrap) -->
+                  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+              
+                  <script>
+                      function nextForm(nextSection) {
+                          // Menyembunyikan formulir saat ini
+                          var currentSection = document.getElementById('formSection' + (nextSection - 1));
+                          currentSection.style.display = 'none';
+              
+                          // Menampilkan formulir berikutnya
+                          var nextSectionElement = document.getElementById('formSection' + nextSection);
+                          nextSectionElement.style.display = 'block';
+                      }
+              
+                      function prevForm(prevSection) {
+                          // Menyembunyikan formulir saat ini
+                          var currentSection = document.getElementById('formSection' + prevSection);
+                          currentSection.style.display = 'none';
+              
+                          // Menampilkan formulir sebelumnya
+                          var prevSectionElement = document.getElementById('formSection' + (prevSection - 1));
+                          prevSectionElement.style.display = 'block';
+                      }
+                  </script>
+                  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+                  </div>
+                </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  {% include 'layout_admin/footer.html' %} {% endblock content %}

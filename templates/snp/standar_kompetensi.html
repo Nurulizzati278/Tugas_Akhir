@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+{% include 'layout_admin/sidebar.html' %}
+
+ <!-- Main Content -->
+<form>
+    <div class="form-group">
+        <label>Standar Kompetensi</label>
+        <input type="number" class="form-control" required=""></input>
+    </div>
+    <div class="card-footer text-right">
+        <a class="btn btn-primary" href=" {% url "standar_isi" %} ">Selanjutnya</a>
+    </div>
+</form>
+            
+{% endblock content %}
