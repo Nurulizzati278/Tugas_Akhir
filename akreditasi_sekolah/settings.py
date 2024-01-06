@@ -101,7 +101,7 @@ WSGI_APPLICATION = "akreditasi_sekolah.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'overlord',
+        'NAME': 'viviechan',
         'USER': 'postgres',
         'PASSWORD': 'yoviepramudya',
         'HOST': 'localhost',
