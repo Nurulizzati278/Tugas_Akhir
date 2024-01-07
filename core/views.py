@@ -143,7 +143,7 @@ def PengajuanSekolah(request):
             pengajuan_sekolah.save()
 
             messages.success(request, 'Berhasil diajukan')
-            return redirect('createpengajuan')  # Ganti 'peta' dengan URL halaman peta
+            return redirect('PengajuanSekolah')  # Ganti 'peta' dengan URL halaman peta
 
         else:
             errors = pengajuan_sekolah_form.errors
