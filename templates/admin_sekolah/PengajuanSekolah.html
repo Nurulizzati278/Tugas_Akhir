@@ -24,54 +24,55 @@
             <div class="card">
               <form>
                 <div class="card-body">
-                  <form method="POST" action="{% url "PengajuanSekolah" %}" class="needs-validation" novalidate="" autocomplete="off">
+                  <form method="POST" action="{% url "PengajuanSekolah" %}" class="needs-validation" enctype="multipart/form-data"   autocomplete="off">
+                    {% csrf_token %}
                   <div class="form-group">
                     <label>Nama Sekolah</label>
-                    <input type="text" class="form-control" required="">
+                    <input type="text" name="NamaSekolah" class="form-control" required="">
                   </div>
                   <div class="form-group">
                     <label>Nama Kepala Sekolah</label>
-                    <input type="text" class="form-control" required="">
+                    <input type="text" name="NamaKepalaSekolah" class="form-control" required="">
                   </div>
                   <div class="form-group">
                     <label>Nama Pengawas Sekolah</label>
-                    <input type="text" class="form-control" required="">
+                    <input type="text" name="NamaPengawasSekolah" class="form-control" required="">
                   </div>
                   <div class="form-group">
                     <label>Alamat Sekolah</label>
-                    <input type="text" class="form-control" required="">
+                    <input type="text" name="AlamatSekolah" class="form-control" required="">
                   </div>
                   <div class="form-group">
                     <label>Jumlah Guru PNS</label>
-                    <input type="number" class="form-control" required="">
+                    <input type="number" name="GuruPNS" class="form-control" required="">
                   </div>
                   <div class="form-group">
                     <label>Jumlah Guru Honorer</label>
-                    <input type="number" class="form-control" required="">
+                    <input type="number" name="GuruNonPNS" class="form-control" required="">
                   </div>
                   <div class="form-group">
-                    <label>Jumlah Pegawai</label>
-                    <input type="number" class="form-control" required="">
+                    <label>Jumlah Staf</label>
+                    <input type="number" name="Staf" class="form-control" required="">
                   </div>
                   <div class="form-group">
                     <label>Jumlah Siswa X</label>
-                    <input type="number" class="form-control" required="">
+                    <input type="number" name="SiswaX" class="form-control" required="">
                   </div>
                   <div class="form-group">
                     <label>Jumlah Siswa XI</label>
-                    <input type="number" class="form-control" required="">
+                    <input type="number" name="SiswaXI" class="form-control" required="">
                   </div>
                   <div class="form-group">
                     <label>Jumlah Siswa XII</label>
-                    <input type="number" class="form-control" required="">
+                    <input type="number" name="SiswaXII" class="form-control" required="">
                   </div>
                   <div class="form-group">
                     <label>Jumlah Ruang Kelas</label>
-                    <input type="number" class="form-control" required="">
+                    <input type="number" name="RuangKelas" class="form-control" required="">
                   </div>
                   <div class="form-group">
                     <label for="jenisKelamin">Status Akreditasi</label>
-                    <select class="form-select" id="jenisKelamin">
+                    <select class="form-select" name="Akreditasi" id="akreditasi">
                         <option selected>Akreditasi</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
@@ -81,7 +82,7 @@
                   </div>
 
                 <div class="card-footer text-right">
-                  <button class="btn btn-primary" type="save">Ajukan</button>
+                  <button class="btn btn-primary" type="submit">Ajukan</button>
                 </div>
               </form>
             </div>

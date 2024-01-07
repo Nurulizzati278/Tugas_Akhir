@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from . import models
-
+from .forms import *
 # masyarakat
 def landing_page(request):
     return render(request, "landing page/index.html")
@@ -62,65 +62,43 @@ def logoutadmin(request):
 
 def create_PengajuanSekolah(request):
     if request.method == 'POST':
-        Pengajuan_sekolah = PengajuanSekolah(request.POST)
+        pengajuan_sekolah_form = PengajuanSekolahForm(request.POST, request.FILES)
 
-        if Pengajuan_sekolah.is_valid():
-            # Membuat objek Sekolah dan mengisi kolom-kolomnya
-            sekolah = Sekolah.objects.create(
-                NamaSekolah=request.POST['NamaSekolah'],
-                NamaKepalaSekolah=request.POST['NamaKepalaSekolah'],
-                NamaPengawasSekolah=request.POST['NamaPengawasSekolah'],
-                AlamatSekolah=request.POST['AlamatSekolah'],
-                JumlahGuruPNS=request.POST['JumlahGuruPNS'],
-                JumlahGuruHonorer=request.POST['JumlahGuruHonorer'],
-                JumlahStaf=request.POST['JumlahStaf'],
-                JumlahSiswaX=request.POST['JumlahSiswaX'],
-                JumlahSiswaXI=request.POST['JumlahSiswaXI'],
-                JumlahSiswaXII=request.POST['JumlahSiswaXII'],
-                JumlahRuangKelas=request.POST['JumlahRuangKelas'],
-                StatusAkreditasi=request.POST['StatusAkreditasi']
-            )
-            
-            # Mengisi kolom-kolom pada objek Sekolah
-            PengajuanSekolah = PengajuanSekolah.save(commit=False)
-            PengajuanSekolah.sekolahId = sekolah
-            pengajuan.NamaSekolah = request.POST['NamaSekolah']
-            PengajuanSekolah.NamaKepalaSekolah = request.POST['NamaKepalaSekolah']
-            PengajuanSekolah.NamaPengawasSekolah = request.POST['NamaPengawasSekolah']
-            PengajuanSekolah.AlamatSekolah = request.POST['AlamatSekolah']
-            PengajuanSekolah.JumlahGuruPNS = request.POST['JumlahGuruPNS']
-            PengajuanSekolah.JumlahGuruHonorer = request.POST['JumlahGuruHonorer']
-            PengajuanSekolah.JumlahStaf = request.POST['JumlahStaf']
-            PengajuanSekolah.JumlahSiswaX = request.POST['JumlahSiswaX']
-            PengajuanSekolah.JumlahSiswaXI = request.POST['JumlahSiswaXI']
-            PengajuanSekolah.JumlahSiswaXII = request.POST['JumlahSiswaXII']
-            PengajuanSekolah.JumlahRuangKelas = request.POST['JumlahRuangKelas']
-            PengajuanSekolah.StatusAkreditasi = request.POST['StatusAkreditasi']
-            #if 'GambarSekolah' in request.FILES:
-             #   PengajuanSekolah.GambarSekolah = request.FILES['GambarSekolah']
-
+        if pengajuan_sekolah_form.is_valid():
             # Simpan objek PengajuanSekolah
-            PengajuanSekolah.save()
-            
+            pengajuan_sekolah = pengajuan_sekolah_form.save(commit=False)
+            pengajuan_sekolah.NamaSekolah=request.POST['NamaSekolah'],
+            pengajuan_sekolah.NamaKepalaSekolah=request.POST['NamaKepalaSekolah'],
+            pengajuan_sekolah.NamaPengawasSekolah=request.POST['NamaPengawasSekolah'],
+            pengajuan_sekolah.AlamatSekolah=request.POST['AlamatSekolah'],
+            pengajuan_sekolah.JumlahGuruPNS=request.POST['GuruPNS'],
+            pengajuan_sekolah.JumlahGuruHonorer=request.POST['GuruNonPNS'],
+            pengajuan_sekolah.JumlahStaf=request.POST['Staf'],
+            pengajuan_sekolah.JumlahSiswaX=request.POST['SiswaX'],
+            pengajuan_sekolah.JumlahSiswaXI=request.POST['SiswaXI'],
+            pengajuan_sekolah.JumlahSiswaXII=request.POST['SiswaXII'],
+            pengajuan_sekolah.JumlahRuangKelas=request.POST['RuangKelas'],
+            pengajuan_sekolah.StatusAkreditasi=request.POST['Akreditasi']
             # Dapatkan objek Status dengan nilai 'DIAJUKAN'
             status = Status.objects.create(tipestatus='DIAJUKAN')
+            status.save()
 
-            # Menghubungkan objek PengajuanSekolah dengan objek status
-            PengajuanSekolah.statusPengajuanSekolah = status
-            PengajuanSekolah.save()
-            
+            # Menghubungkan objek PengajuanSekolah dengan objek status dan sekolah
+            pengajuan_sekolah.statusPengajuanSekolah = status
+            pengajuan_sekolah.save()
+
             messages.success(request, 'Berhasil diajukan')
-            return redirect('dashboard')  # Ganti 'peta' dengan URL halaman peta
+            return redirect('createpengajuan')  # Ganti 'peta' dengan URL halaman peta
 
         else:
-            errors = PengajuanSekolah_form.errors
+            errors = pengajuan_sekolah_form.errors
             print(errors)
             messages.error(request, 'Terjadi kesalahan dalam menambahkan data.')
 
     else:
-        PengajuanSekolah_form = PengajuanSekolahForm()
+        pengajuan_sekolah_form = PengajuanSekolahForm()
 
-    return render(request, 'admin_sekolah/dashboard.html', {'Pengajuan_sekolah': Pengajuan_sekolah})
+    return render(request, 'admin_sekolah/PengajuanSekolah.html', {'pengajuan_sekolah_form': pengajuan_sekolah_form})
 
 
 # admin sekolah
@@ -138,7 +116,44 @@ def profile(request):
     return render(request, "admin_sekolah/profile.html")
 
 def PengajuanSekolah(request):
-    return render(request, "admin_sekolah/PengajuanSekolah.html")
+    if request.method == 'POST':
+        pengajuan_sekolah_form = PengajuanSekolahForm(request.POST, request.FILES)
+
+        if pengajuan_sekolah_form.is_valid():
+            # Simpan objek PengajuanSekolah
+            pengajuan_sekolah = pengajuan_sekolah_form.save(commit=False)
+            pengajuan_sekolah.NamaSekolah=request.POST['NamaSekolah'],
+            pengajuan_sekolah.NamaKepalaSekolah=request.POST['NamaKepalaSekolah'],
+            pengajuan_sekolah.NamaPengawasSekolah=request.POST['NamaPengawasSekolah'],
+            pengajuan_sekolah.AlamatSekolah=request.POST['AlamatSekolah'],
+            pengajuan_sekolah.JumlahGuruPNS=request.POST['GuruPNS'],
+            pengajuan_sekolah.JumlahGuruHonorer=request.POST['GuruNonPNS'],
+            pengajuan_sekolah.JumlahStaf=request.POST['Staf'],
+            pengajuan_sekolah.JumlahSiswaX=request.POST['SiswaX'],
+            pengajuan_sekolah.JumlahSiswaXI=request.POST['SiswaXI'],
+            pengajuan_sekolah.JumlahSiswaXII=request.POST['SiswaXII'],
+            pengajuan_sekolah.JumlahRuangKelas=request.POST['RuangKelas'],
+            pengajuan_sekolah.StatusAkreditasi=request.POST['Akreditasi']
+            # Dapatkan objek Status dengan nilai 'DIAJUKAN'
+            status = Status.objects.create(tipestatus='DIAJUKAN')
+            status.save()
+
+            # Menghubungkan objek PengajuanSekolah dengan objek status dan sekolah
+            pengajuan_sekolah.statusPengajuanSekolah = status
+            pengajuan_sekolah.save()
+
+            messages.success(request, 'Berhasil diajukan')
+            return redirect('createpengajuan')  # Ganti 'peta' dengan URL halaman peta
+
+        else:
+            errors = pengajuan_sekolah_form.errors
+            print(errors)
+            messages.error(request, 'Terjadi kesalahan dalam menambahkan data.')
+
+    else:
+        pengajuan_sekolah_form = PengajuanSekolahForm()
+
+    return render(request, 'admin_sekolah/PengajuanSekolah.html', {'pengajuan_sekolah_form': pengajuan_sekolah_form})
 
 #def penilaian(request):
 #    return render(request, "admin_sekolah/penilaian.html")

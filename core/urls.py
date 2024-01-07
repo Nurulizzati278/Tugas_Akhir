@@ -26,7 +26,7 @@ urlpatterns = [
     path("edit_koordinat/", views.edit_koordinat, name="edit_koordinat"),
     path("pengajuan_akreditasi/", views.pengajuan_akreditai, name="pengajuan_akreditasi"),
     path("panduan/", views.panduan, name="panduan"),
-    path("PengajuanSekolah/",views.PengajuanSekolah, name="PengajuanSekolah")
+    path("createpengajuan/",views.create_PengajuanSekolah, name="createpengajuan")
     
     #path("edit_penilaian/", views.edit_penilaian, name="edit_penilaian"),
     #path("penilaian/", views.penilaian, name="penilaian"),
