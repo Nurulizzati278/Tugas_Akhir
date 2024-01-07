@@ -1,7 +1,7 @@
 from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import AbstractUser
-from django.contrib.gis.db import models
+# from django.contrib.gis.db import models
 
 import os
 import uuid
@@ -44,7 +44,7 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     nip = models.CharField(max_length=20, unique=True)
     nama = models.CharField(max_length=255)
-    umur = models.IntegerField()
+    umur = models.IntegerField(null=True, blank=True)
     profil = models.ImageField(upload_to="profil/", null=True, blank=True)
     golongan = models.CharField(max_length=10)
     is_active = models.BooleanField(default=True)
@@ -519,7 +519,7 @@ class PengajuanAkreditasi(models.Model):
     #LaporanKegiatanProgramKreatif = models.CharField(max_length=50, choices=KEBUTUHAN_CHOICES)
     #GambarLaporanKegiatanProgramKreatif = models.ImageField(upload_to=LaporanKegiatanProgramKreatif, null=True, blank=True) 
     GambarKomponenMutuLulusan = models.ImageField(upload_to=KomponenMutuLulusan, null=True, blank=True)
-    KomponenMutuLulusan = models.IntegerField(max_length=100)
+    KomponenMutuLulusan = models.IntegerField(null=True, blank=True)
     
     #Komponen Proses Pebelajaran
     LembarKerjaSiswa = models.CharField(max_length=50, choices=KEBUTUHAN_CHOICES)
@@ -541,7 +541,7 @@ class PengajuanAkreditasi(models.Model):
     #TataTertib = models.CharField(max_length=50, choices=KEBUTUHAN_CHOICES)
     #GambarTataTertib = models.ImageField(upload_to=TataTertib, null=True, blank=True)
     GambarKomponenProsesPembelajaran = models.ImageField(upload_to=KomponenProsesPembelajaran, null=True, blank=True)
-    KomponenProsesPembelajaran = models.IntegerField(max_length=100)
+    KomponenProsesPembelajaran = models.IntegerField(null=True, blank=True)
     
     #Komponen mutu guru
     RPP = models.CharField(max_length=50, choices=KEBUTUHAN_CHOICES)
@@ -561,7 +561,7 @@ class PengajuanAkreditasi(models.Model):
     #RPP = models.CharField(max_length=50, choices=KEBUTUHAN_CHOICES)
     #GambarRPP = models.ImageField(upload_to=RPP, null=True, blank=True)
     GambarKomponenMutuGuru = models.ImageField(upload_to=KomponenMutuGuru, null=True, blank=True)
-    KomponenMutuGuru = models.IntegerField(max_length=100)
+    KomponenMutuGuru = models.IntegerField(null=True, blank=True)
     
     #Komponen Manajemen Sekolah
     DaftarHadirRapatVisiMisi = models.CharField(max_length=50, choices=KEBUTUHAN_CHOICES)
@@ -635,7 +635,7 @@ class PengajuanAkreditasi(models.Model):
     DokumenEvaluasiDiriTahunSebelumnya = models.CharField(max_length=50, choices=KEBUTUHAN_CHOICES)
     GambarDokumenEvaluasiDiriTahunSebelumnya = models.ImageField(upload_to=DokumenEvaluasiDiriTahunSebelumnya, null=True, blank=True)
     GambarKomponenManajemenSekolah = models.ImageField(upload_to=KomponenManajemenSekolah, null=True, blank=True)
-    KomponenManajemenSekolah = models.IntegerField(max_length=100)
+    KomponenManajemenSekolah = models.IntegerField(null=True, blank=True)
 
 
 class Nilai(models.Model):
@@ -645,10 +645,10 @@ class Nilai(models.Model):
     Warna = models.CharField(max_length=50)
 
 
-class PolygonModel(models.Model):
-    PolygonId = models.BigAutoField(primary_key=True)
-    SekolahId = models.ForeignKey(PengajuanSekolah, on_delete=models.CASCADE)
-    geometry = models.PolygonField()
+# class PolygonModel(models.Model):
+#     PolygonId = models.BigAutoField(primary_key=True)
+#     SekolahId = models.ForeignKey(PengajuanSekolah, on_delete=models.CASCADE)
+#     geometry = models.PolygonField()
 
-    def __str__(self):
-        return str(self.id)
+#     def __str__(self):
+#         return str(self.id)
